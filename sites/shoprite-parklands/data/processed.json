@@ -1,9 +1,9 @@
 {
   "plant": "Shoprite Parklands",
-  "last_updated": "2026-04-02 16:01 SAST",
+  "last_updated": "2026-04-02 17:21 SAST",
   "date": "2026-04-02",
-  "total_kwh": 210.57,
-  "last_hour": 14,
+  "total_kwh": 250.42,
+  "last_hour": 15,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -27,7 +27,7 @@
       42.5,
       44.6,
       29.89,
-      0.0,
+      39.85,
       0.0,
       0.0,
       0.0,
@@ -80,7 +80,7 @@
     42.5,
     44.6,
     29.89,
-    0.0,
+    39.85,
     0.0,
     0.0,
     0.0,
@@ -332,7 +332,7 @@
   },
   "history": {
     "2026-04-02": {
-      "total_kwh": 210.57,
+      "total_kwh": 250.42,
       "hourly": [
         0.0,
         0.0,
@@ -349,7 +349,7 @@
         42.5,
         44.6,
         29.89,
-        0.0,
+        39.85,
         0.0,
         0.0,
         0.0,
@@ -385,8 +385,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-02 16:01 SAST",
-      "last_hour": 14
+      "last_updated": "2026-04-02 17:21 SAST",
+      "last_hour": 15
     }
   },
   "thresholds": {
