@@ -1,9 +1,9 @@
 {
   "plant": "BMI Park",
-  "last_updated": "2026-04-03 19:04 SAST",
+  "last_updated": "2026-04-03 19:59 SAST",
   "date": "2026-04-03",
   "total_kwh": 2196.19,
-  "last_hour": 17,
+  "last_hour": 18,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -442,8 +442,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-03 19:04 SAST",
-      "last_hour": 17
+      "last_updated": "2026-04-03 19:59 SAST",
+      "last_hour": 18
     }
   },
   "thresholds": {
