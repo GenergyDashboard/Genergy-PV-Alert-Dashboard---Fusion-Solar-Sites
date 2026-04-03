@@ -1,12 +1,12 @@
 {
   "plant": "MP The Pines",
-  "last_updated": "2026-04-03 07:56 SAST",
+  "last_updated": "2026-04-03 09:33 SAST",
   "date": "2026-04-03",
-  "total_kwh": 0.0,
-  "last_hour": 6,
-  "status": "offline",
+  "total_kwh": 13.03,
+  "last_hour": 8,
+  "status": "ok",
   "alerts": {
-    "offline": true,
+    "offline": false,
     "pace_low": false,
     "total_low": false
   },
@@ -19,8 +19,8 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.0,
+      3.54,
+      9.49,
       0.0,
       0.0,
       0.0,
@@ -72,8 +72,8 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
+    3.54,
+    9.49,
     0.0,
     0.0,
     0.0,
@@ -389,7 +389,7 @@
       "last_hour": 22
     },
     "2026-04-03": {
-      "total_kwh": 0.0,
+      "total_kwh": 13.03,
       "hourly": [
         0.0,
         0.0,
@@ -398,8 +398,8 @@
         0.0,
         0.0,
         0.0,
-        0.0,
-        0.0,
+        3.54,
+        9.49,
         0.0,
         0.0,
         0.0,
@@ -442,8 +442,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-03 07:56 SAST",
-      "last_hour": 6
+      "last_updated": "2026-04-03 09:33 SAST",
+      "last_hour": 8
     }
   },
   "thresholds": {
@@ -454,7 +454,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "reason": "no generation during daylight",
+    "reason": "bootstrap (1/7)",
     "sample_days": 1
   }
 }
