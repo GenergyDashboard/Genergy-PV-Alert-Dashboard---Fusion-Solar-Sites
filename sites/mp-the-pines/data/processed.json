@@ -1,9 +1,9 @@
 {
   "plant": "MP The Pines",
-  "last_updated": "2026-04-03 21:59 SAST",
+  "last_updated": "2026-04-03 23:01 SAST",
   "date": "2026-04-03",
   "total_kwh": 919.42,
-  "last_hour": 20,
+  "last_hour": 21,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -442,8 +442,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-03 21:59 SAST",
-      "last_hour": 20
+      "last_updated": "2026-04-03 23:01 SAST",
+      "last_hour": 21
     }
   },
   "thresholds": {
