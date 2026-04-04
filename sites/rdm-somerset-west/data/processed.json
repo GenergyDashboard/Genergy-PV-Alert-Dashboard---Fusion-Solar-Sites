@@ -1,12 +1,12 @@
 {
   "plant": "RDM Somerset West 5MW",
-  "last_updated": "2026-04-04 07:42 SAST",
+  "last_updated": "2026-04-04 09:24 SAST",
   "date": "2026-04-04",
-  "total_kwh": 0.0,
-  "last_hour": 6,
-  "status": "offline",
+  "total_kwh": 131.67,
+  "last_hour": 7,
+  "status": "ok",
   "alerts": {
-    "offline": true,
+    "offline": false,
     "pace_low": false,
     "total_low": false
   },
@@ -19,7 +19,7 @@
       0.0,
       0.0,
       0.0,
-      0.0,
+      131.67,
       0.0,
       0.0,
       0.0,
@@ -72,7 +72,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
+    131.67,
     0.0,
     0.0,
     0.0,
@@ -446,7 +446,7 @@
       "last_hour": 22
     },
     "2026-04-04": {
-      "total_kwh": 0.0,
+      "total_kwh": 131.67,
       "hourly": [
         0.0,
         0.0,
@@ -455,7 +455,7 @@
         0.0,
         0.0,
         0.0,
-        0.0,
+        131.67,
         0.0,
         0.0,
         0.0,
@@ -499,8 +499,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-04 07:42 SAST",
-      "last_hour": 6
+      "last_updated": "2026-04-04 09:24 SAST",
+      "last_hour": 7
     }
   },
   "thresholds": {
@@ -511,7 +511,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "reason": "no generation during daylight",
+    "reason": "too early",
     "sample_days": 2
   }
 }
