@@ -1,9 +1,9 @@
 {
   "plant": "WG Group - Mdantsane SuperSpar",
-  "last_updated": "2026-04-05 15:28 SAST",
+  "last_updated": "2026-04-05 16:58 SAST",
   "date": "2026-04-05",
-  "total_kwh": 524.39,
-  "last_hour": 14,
+  "total_kwh": 613.46,
+  "last_hour": 15,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -27,7 +27,7 @@
       82.67,
       96.15,
       99.24,
-      0.0,
+      89.07,
       0.0,
       0.0,
       0.0,
@@ -80,7 +80,7 @@
     82.67,
     96.15,
     99.24,
-    0.0,
+    89.07,
     0.0,
     0.0,
     0.0,
@@ -503,7 +503,7 @@
       "last_hour": 22
     },
     "2026-04-05": {
-      "total_kwh": 524.39,
+      "total_kwh": 613.46,
       "hourly": [
         0.0,
         0.0,
@@ -520,7 +520,7 @@
         82.67,
         96.15,
         99.24,
-        0.0,
+        89.07,
         0.0,
         0.0,
         0.0,
@@ -556,8 +556,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-05 15:28 SAST",
-      "last_hour": 14
+      "last_updated": "2026-04-05 16:58 SAST",
+      "last_hour": 15
     }
   },
   "thresholds": {
