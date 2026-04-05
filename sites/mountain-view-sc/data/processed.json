@@ -1,9 +1,9 @@
 {
   "plant": "Mountain View Shopping Centre",
-  "last_updated": "2026-04-05 19:55 SAST",
+  "last_updated": "2026-04-05 21:10 SAST",
   "date": "2026-04-05",
   "total_kwh": 2048.39,
-  "last_hour": 18,
+  "last_hour": 19,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -556,8 +556,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-05 19:55 SAST",
-      "last_hour": 18
+      "last_updated": "2026-04-05 21:10 SAST",
+      "last_hour": 19
     }
   },
   "thresholds": {
