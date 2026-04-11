@@ -1,14 +1,14 @@
 {
   "plant": "BMI Paterson",
-  "last_updated": "2026-04-11 17:54 SAST",
+  "last_updated": "2026-04-11 19:01 SAST",
   "date": "2026-04-11",
-  "total_kwh": 89.55,
-  "last_hour": 16,
-  "status": "low",
+  "total_kwh": 89.88,
+  "last_hour": 17,
+  "status": "ok",
   "alerts": {
     "offline": false,
     "pace_low": false,
-    "total_low": true
+    "total_low": false
   },
   "today": {
     "hourly_pv": [
@@ -29,7 +29,7 @@
       9.42,
       6.17,
       1.53,
-      0.0,
+      0.33,
       0.0,
       0.0,
       0.0,
@@ -53,10 +53,10 @@
       408.0,
       408.0,
       327.0,
-      259.0,
-      131.0,
-      45.0,
-      10.0,
+      159.0,
+      96.0,
+      43.0,
+      8.0,
       0,
       0,
       0,
@@ -82,7 +82,7 @@
     9.42,
     6.17,
     1.53,
-    0.0,
+    0.33,
     0.0,
     0.0,
     0.0,
@@ -106,10 +106,10 @@
     408.0,
     408.0,
     327.0,
-    259.0,
-    131.0,
-    45.0,
-    10.0,
+    159.0,
+    96.0,
+    43.0,
+    8.0,
     0,
     0,
     0,
@@ -845,7 +845,7 @@
       "last_hour": 21
     },
     "2026-04-11": {
-      "total_kwh": 89.55,
+      "total_kwh": 89.88,
       "hourly": [
         0.0,
         0.0,
@@ -864,7 +864,7 @@
         9.42,
         6.17,
         1.53,
-        0.0,
+        0.33,
         0.0,
         0.0,
         0.0,
@@ -888,18 +888,18 @@
         408.0,
         408.0,
         327.0,
-        259.0,
-        131.0,
-        45.0,
-        10.0,
+        159.0,
+        96.0,
+        43.0,
+        8.0,
         0,
         0,
         0,
         0,
         0
       ],
-      "last_updated": "2026-04-11 17:54 SAST",
-      "last_hour": 16
+      "last_updated": "2026-04-11 19:01 SAST",
+      "last_hour": 17
     }
   },
   "thresholds": {
@@ -910,15 +910,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "curve_fraction": 0.991,
-    "expected_by_now": 160.6,
-    "irrad_factor": 0.602,
-    "actual_kwh": 89.55,
-    "pace_trigger": 48.2,
-    "projected_total": 90.4,
-    "daily_min": 205.3,
-    "sunrise": 6.3,
-    "sunset": 17.7,
+    "reason": "nighttime",
     "sample_days": 9
   }
 }
