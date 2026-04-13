@@ -1,9 +1,9 @@
 {
   "plant": "WG Group - Mdantsane SuperSpar",
-  "last_updated": "2026-04-13 08:34 SAST",
+  "last_updated": "2026-04-13 11:17 SAST",
   "date": "2026-04-13",
   "total_kwh": 0.0,
-  "last_hour": 7,
+  "last_hour": 9,
   "status": "offline",
   "alerts": {
     "offline": true,
@@ -1012,8 +1012,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-13 08:34 SAST",
-      "last_hour": 7
+      "last_updated": "2026-04-13 11:17 SAST",
+      "last_hour": 9
     }
   },
   "thresholds": {
