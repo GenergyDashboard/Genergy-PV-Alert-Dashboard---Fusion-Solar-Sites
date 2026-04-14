@@ -2,7 +2,7 @@ name: Scrape and Process FusionSolar Sites Data
 
 on:
   schedule:
-    - cron: '5 * * * *'
+    - cron: ' 3-19 * * *'
   workflow_dispatch:
 
 permissions:
