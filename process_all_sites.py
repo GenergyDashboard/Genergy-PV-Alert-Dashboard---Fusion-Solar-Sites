@@ -30,6 +30,11 @@ import requests
 #     slug must match download_all_sites.py and the folder under sites/
 # =============================================================================
 SITES = {
+    "addo-spar": {
+        "display_name": "Addo Spar",
+        "lat": -33.5733,
+        "lon": 25.7467,
+    },
     "bel-essex-valeo": {
         "display_name": "Bel Essex (Valeo)",
         "lat": -33.783722863963575,
@@ -54,6 +59,16 @@ SITES = {
         "display_name": "Keypak Part 2",
         "lat": -33.91606455874616,
         "lon": 25.600899466686126,
+    },
+    "kirkwood-fnb": {
+        "display_name": "Kirkwood FNB",
+        "lat": -33.40047315873728,
+        "lon": 25.44748345729338,
+    },
+    "kirkwood-spar": {
+        "display_name": "Kirkwood Spar",
+        "lat": -33.40047315873728,
+        "lon": 25.44748345729338,
     },
     "mp-the-pines": {
         "display_name": "MP The Pines",
