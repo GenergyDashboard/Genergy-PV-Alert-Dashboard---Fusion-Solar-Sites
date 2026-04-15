@@ -27,11 +27,14 @@ from playwright.sync_api import sync_playwright
 #     slug:        folder name under sites/ (used for file paths)
 # =============================================================================
 SITES = [
+    {"search_name": "Addo Spar Smart Logger",         "slug": "addo-spar"},
     {"search_name": "Bel Essex(Valeo)",                "slug": "bel-essex-valeo"},
     {"search_name": "BMI Park",                        "slug": "bmi-park"},
     {"search_name": "BMI Paterson",                    "slug": "bmi-paterson"},
     {"search_name": "Coega Dairy",                     "slug": "coega-dairy"},
     {"search_name": "Keypak Part 2",                   "slug": "keypak-part-2"},
+    {"search_name": "Kirkwood FNB",                    "slug": "kirkwood-fnb"},
+    {"search_name": "Kirkwood Spar",                   "slug": "kirkwood-spar"},
     {"search_name": "MP The Pines",                    "slug": "mp-the-pines"},
     {"search_name": "Mountain View Shopping Centre",   "slug": "mountain-view-sc"},
     {"search_name": "RDM Somerset West 5MW",           "slug": "rdm-somerset-west"},
