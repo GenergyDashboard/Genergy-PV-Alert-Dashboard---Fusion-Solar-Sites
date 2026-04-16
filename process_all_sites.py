@@ -1,24 +1,25 @@
 """
-process_all_sites.py
+process_all_sites.py  —  FusionSolar Multi-Site Processor
 
 Processes all FusionSolar site xlsx files and produces per-site dashboard JSON.
 
 For each site:
 - Reads the downloaded xlsx from data/raw/<slug>.xlsx
 - Extracts hourly PV Yield
-- Fetches irradiation from Open-Meteo API
+- Fetches irradiation from Open-Meteo API (with retry)
 - Maintains rolling 30-day history
 - Calculates statistics (avg, min, max, percentiles)
 - Sends Telegram alerts for underperformance
 - Writes dashboard-ready processed.json
 
-All thresholds are purely data-driven (no hardcoded values).
+Status uses cumulative-hourly-avg logic, matching the dashboard "% of avg" badge.
 """
 
 import json
 import math
 import sys
 import os
+import time
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
@@ -152,29 +153,41 @@ def solar_curve_fraction(hour: int, month: int) -> float:
 
 
 # =============================================================================
-# Irradiation
+# Irradiation — with retry & sanity check
 # =============================================================================
 
 def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
-    try:
-        resp = requests.get(
-            "https://api.open-meteo.com/v1/forecast",
-            params={
-                "latitude": lat, "longitude": lon,
-                "hourly": "shortwave_radiation",
-                "timezone": "Africa/Johannesburg",
-                "start_date": date_str, "end_date": date_str,
-            },
-            timeout=15,
-        )
-        resp.raise_for_status()
-        irrad = resp.json().get("hourly", {}).get("shortwave_radiation", [])
-        while len(irrad) < 24:
-            irrad.append(0)
-        return [round(v if v else 0, 1) for v in irrad[:24]]
-    except Exception as e:
-        print(f"    ⚠️  Irradiation fetch failed: {e}")
-        return [0] * 24
+    """Fetch hourly irradiation from Open-Meteo with 3 retries and sanity check."""
+    last_err = None
+    for attempt in range(3):
+        try:
+            resp = requests.get(
+                "https://api.open-meteo.com/v1/forecast",
+                params={
+                    "latitude": lat, "longitude": lon,
+                    "hourly": "shortwave_radiation",
+                    "timezone": "Africa/Johannesburg",
+                    "start_date": date_str, "end_date": date_str,
+                },
+                timeout=20,
+            )
+            resp.raise_for_status()
+            irrad = resp.json().get("hourly", {}).get("shortwave_radiation", [])
+            while len(irrad) < 24:
+                irrad.append(0)
+            result = [round(v if v else 0, 1) for v in irrad[:24]]
+            # Sanity check: midday irradiation should be at least 10 W/m²
+            midday = sum(result[10:15])
+            if midday < 10:
+                raise ValueError(f"Midday irradiation suspiciously low: {midday:.1f} W/m²")
+            return result
+        except Exception as e:
+            last_err = e
+            print(f"    ⚠️  Irradiation fetch attempt {attempt+1}/3 failed: {e}")
+            if attempt < 2:
+                time.sleep(2 * (attempt + 1))
+    print(f"    ❌ Irradiation unavailable after 3 attempts: {last_err}")
+    return [0] * 24
 
 
 # =============================================================================
@@ -188,13 +201,10 @@ def parse_fusionsolar_report(filepath: Path) -> dict:
     """
     df = pd.read_excel(filepath, header=None, sheet_name=0)
 
-    # Extract plant name from A1 (e.g. "Plant Report_Coega Dairy")
     plant_name_raw = str(df.iloc[0, 0]) if not pd.isna(df.iloc[0, 0]) else ""
     plant_name = plant_name_raw.replace("Plant Report_", "").strip()
 
-    # Find headers (row 1)
     headers = [str(h).strip() if not pd.isna(h) else "" for h in df.iloc[1].tolist()]
-
     pv_col = next(
         (i for i, h in enumerate(headers) if "PV Yield" in h),
         PV_COLUMN_INDEX,
@@ -221,7 +231,8 @@ def parse_fusionsolar_report(filepath: Path) -> dict:
         pv_val = float(row.iloc[pv_col]) if not pd.isna(row.iloc[pv_col]) else 0.0
         hourly[hour] = round(pv_val, 4)
         total += pv_val
-        last_hour = hour
+        if pv_val > 0:
+            last_hour = hour
 
     return {
         "plant_name": plant_name,
@@ -336,10 +347,15 @@ def calculate_stats(history: dict, exclude_date: str = None) -> dict:
 
 
 # =============================================================================
-# Status checks
+# Status checks — uses CUMULATIVE HOURLY AVG (matches dashboard "% of avg")
 # =============================================================================
 
 def determine_status(data: dict, month: int, stats: dict, irradiation: list = None) -> tuple:
+    """
+    Status logic matches the dashboard's "% of avg" badge exactly.
+    A site is 'low' if cumulative PV (hours 0→last_hour) is < 30% of cumulative
+    30-day hourly average, adjusted for today's irradiation.
+    """
     total       = data["total_kwh"]
     hour        = data["last_hour"]
     sunrise, sunset = solar_window(month)
@@ -360,37 +376,46 @@ def determine_status(data: dict, month: int, stats: dict, irradiation: list = No
     if sample_days < MIN_HISTORY_DAYS:
         return "ok", alerts, {"reason": f"bootstrap ({sample_days}/{MIN_HISTORY_DAYS})", "sample_days": sample_days}
 
-    effective_expected = stats["daily_avg"]
+    # Cumulative hourly avg — same calc as dashboard
+    hourly_avg      = stats.get("hourly_avg", [0] * 24)
+    expected_by_now = sum(hourly_avg[:hour + 1])
+
+    # Irradiation normalization
     irrad_factor = 1.0
     if irradiation and stats.get("hourly_irrad_avg"):
         avg_irrad = stats["hourly_irrad_avg"]
-        today_cum = sum(irradiation[:hour+1])
-        avg_cum   = sum(avg_irrad[:hour+1])
+        today_cum = sum(irradiation[:hour + 1])
+        avg_cum   = sum(avg_irrad[:hour + 1])
         if avg_cum > 0:
             irrad_factor = max(min(today_cum / avg_cum, 1.5), 0.1)
 
-    expected_by_now = effective_expected * curve_frac * irrad_factor
-    pace_trigger    = expected_by_now * PACE_THRESHOLD_PCT
-    projected_total = total / curve_frac if curve_frac > 0 else 0
+    effective_expected = expected_by_now * irrad_factor
+    pace_trigger       = effective_expected * PACE_THRESHOLD_PCT
+    pct_of_avg         = round((total / expected_by_now) * 100) if expected_by_now > 0 else 0
 
     if total < pace_trigger:
         alerts["pace_low"] = True
-    daily_min = stats["daily_min"]
-    adjusted_min = daily_min * irrad_factor if irrad_factor < 1.0 else daily_min
+
+    projected_total = total / curve_frac if curve_frac > 0 else 0
+    daily_min       = stats.get("daily_min", 0)
+    adjusted_min    = daily_min * irrad_factor if irrad_factor < 1.0 else daily_min
     if projected_total < adjusted_min:
         alerts["total_low"] = True
 
     status = "low" if (alerts["pace_low"] or alerts["total_low"]) else "ok"
     return status, alerts, {
-        "curve_fraction": round(curve_frac, 3),
-        "expected_by_now": round(expected_by_now, 1),
-        "irrad_factor": round(irrad_factor, 3),
-        "actual_kwh": round(total, 2),
-        "pace_trigger": round(pace_trigger, 1),
-        "projected_total": round(projected_total, 1),
-        "daily_min": daily_min,
-        "sunrise": round(sunrise, 2), "sunset": round(sunset, 2),
-        "sample_days": sample_days,
+        "pct_of_avg":         pct_of_avg,
+        "expected_by_now":    round(expected_by_now, 1),
+        "effective_expected": round(effective_expected, 1),
+        "irrad_factor":       round(irrad_factor, 3),
+        "actual_kwh":         round(total, 2),
+        "pace_trigger":       round(pace_trigger, 1),
+        "projected_total":    round(projected_total, 1),
+        "daily_min":          daily_min,
+        "curve_fraction":     round(curve_frac, 3),
+        "sunrise":            round(sunrise, 2),
+        "sunset":             round(sunset, 2),
+        "sample_days":        sample_days,
     }
 
 
@@ -492,15 +517,12 @@ def main():
             skipped_count += 1
             continue
 
-        # Parse xlsx
         data = parse_fusionsolar_report(raw_file)
         print(f"    📅 Date: {data['date']} | Plant: {data['plant_name']}")
         print(f"    ⚡ {data['total_kwh']:.1f} kWh | Last hour: {data['last_hour']:02d}:00")
 
-        # Fetch irradiation
         irradiation = fetch_irradiation(data["date"], lat, lon)
 
-        # Load & update history
         history = load_history(history_file)
         history[data["date"]] = {
             "total_kwh":    data["total_kwh"],
@@ -511,18 +533,13 @@ def main():
         }
         save_history(history, history_file)
 
-        # Stats
         stats = calculate_stats(history, exclude_date=data["date"])
-
-        # Status
         status, alerts, debug = determine_status(data, month, stats, irradiation)
 
         print(f"    📈 Avg: {stats['daily_avg']:.1f} kWh | Days: {stats['sample_days']} | Status: {status.upper()}")
 
-        # Alerts
         send_alerts(display_name, status, alerts, data, debug, state_file)
 
-        # Write dashboard JSON
         output = {
             "plant":        display_name,
             "last_updated": now.strftime("%Y-%m-%d %H:%M SAST"),
