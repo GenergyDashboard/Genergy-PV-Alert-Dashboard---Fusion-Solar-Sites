@@ -1,9 +1,9 @@
 {
   "plant": "Kirkwood FNB",
-  "last_updated": "2026-04-16 10:03 SAST",
+  "last_updated": "2026-04-16 11:24 SAST",
   "date": "2026-04-16",
-  "total_kwh": 5.38,
-  "last_hour": 8,
+  "total_kwh": 14.09,
+  "last_hour": 9,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -21,7 +21,7 @@
       0.05,
       1.26,
       4.07,
-      0.0,
+      8.71,
       0.0,
       0.0,
       0.0,
@@ -74,7 +74,7 @@
     0.05,
     1.26,
     4.07,
-    0.0,
+    8.71,
     0.0,
     0.0,
     0.0,
@@ -389,7 +389,7 @@
       "last_hour": 20
     },
     "2026-04-16": {
-      "total_kwh": 5.38,
+      "total_kwh": 14.09,
       "hourly": [
         0.0,
         0.0,
@@ -400,7 +400,7 @@
         0.05,
         1.26,
         4.07,
-        0.0,
+        8.71,
         0.0,
         0.0,
         0.0,
@@ -442,8 +442,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-16 10:03 SAST",
-      "last_hour": 8
+      "last_updated": "2026-04-16 11:24 SAST",
+      "last_hour": 9
     }
   },
   "thresholds": {
