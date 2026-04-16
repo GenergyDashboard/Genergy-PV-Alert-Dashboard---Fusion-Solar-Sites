@@ -1,9 +1,9 @@
 {
   "plant": "Coega Dairy",
-  "last_updated": "2026-04-16 14:10 SAST",
+  "last_updated": "2026-04-16 15:06 SAST",
   "date": "2026-04-16",
-  "total_kwh": 1597.79,
-  "last_hour": 12,
+  "total_kwh": 2211.56,
+  "last_hour": 13,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -25,7 +25,7 @@
       301.16,
       476.83,
       562.14,
-      0.0,
+      613.77,
       0.0,
       0.0,
       0.0,
@@ -78,7 +78,7 @@
     301.16,
     476.83,
     562.14,
-    0.0,
+    613.77,
     0.0,
     0.0,
     0.0,
@@ -1130,7 +1130,7 @@
       "last_hour": 20
     },
     "2026-04-16": {
-      "total_kwh": 1597.79,
+      "total_kwh": 2211.56,
       "hourly": [
         0.0,
         0.0,
@@ -1145,7 +1145,7 @@
         301.16,
         476.83,
         562.14,
-        0.0,
+        613.77,
         0.0,
         0.0,
         0.0,
@@ -1183,8 +1183,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-16 14:10 SAST",
-      "last_hour": 12
+      "last_updated": "2026-04-16 15:06 SAST",
+      "last_hour": 13
     }
   },
   "thresholds": {
@@ -1195,13 +1195,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "curve_fraction": 0.636,
-    "expected_by_now": 2166.3,
-    "irrad_factor": 0.968,
-    "actual_kwh": 1597.79,
-    "pace_trigger": 649.9,
-    "projected_total": 2512.2,
+    "pct_of_avg": 85,
+    "expected_by_now": 2598.3,
+    "effective_expected": 2710.2,
+    "irrad_factor": 1.043,
+    "actual_kwh": 2211.56,
+    "pace_trigger": 813.1,
+    "projected_total": 2903.2,
     "daily_min": 905.5,
+    "curve_fraction": 0.762,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 14
