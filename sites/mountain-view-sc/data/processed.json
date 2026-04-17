@@ -1,9 +1,9 @@
 {
   "plant": "Mountain View Shopping Centre",
-  "last_updated": "2026-04-17 13:57 SAST",
+  "last_updated": "2026-04-17 15:17 SAST",
   "date": "2026-04-17",
-  "total_kwh": 163.49,
-  "last_hour": 12,
+  "total_kwh": 185.41,
+  "last_hour": 13,
   "status": "low",
   "alerts": {
     "offline": false,
@@ -25,7 +25,7 @@
       27.88,
       23.48,
       44.16,
-      0.0,
+      21.92,
       0.0,
       0.0,
       0.0,
@@ -38,8 +38,8 @@
       0.0
     ],
     "irradiation": [
-      0,
-      0,
+      0.0,
+      0.0,
       0,
       0,
       0,
@@ -78,7 +78,7 @@
     27.88,
     23.48,
     44.16,
-    0.0,
+    21.92,
     0.0,
     0.0,
     0.0,
@@ -91,8 +91,8 @@
     0.0
   ],
   "irradiation": [
-    0,
-    0,
+    0.0,
+    0.0,
     0,
     0,
     0,
@@ -1187,7 +1187,7 @@
       "last_hour": 18
     },
     "2026-04-17": {
-      "total_kwh": 163.49,
+      "total_kwh": 185.41,
       "hourly": [
         0.0,
         0.0,
@@ -1202,7 +1202,7 @@
         27.88,
         23.48,
         44.16,
-        0.0,
+        21.92,
         0.0,
         0.0,
         0.0,
@@ -1215,8 +1215,8 @@
         0.0
       ],
       "irradiation": [
-        0,
-        0,
+        0.0,
+        0.0,
         0,
         0,
         0,
@@ -1240,8 +1240,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-17 13:57 SAST",
-      "last_hour": 12
+      "last_updated": "2026-04-17 15:17 SAST",
+      "last_hour": 13
     }
   },
   "thresholds": {
@@ -1252,15 +1252,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 18,
-    "expected_by_now": 890.5,
-    "effective_expected": 1234.3,
-    "irrad_factor": 1.386,
-    "actual_kwh": 163.49,
-    "pace_trigger": 370.3,
-    "projected_total": 257.1,
+    "pct_of_avg": 16,
+    "expected_by_now": 1162.3,
+    "effective_expected": 1576.1,
+    "irrad_factor": 1.356,
+    "actual_kwh": 185.41,
+    "pace_trigger": 472.8,
+    "projected_total": 243.4,
     "daily_min": 834.6,
-    "curve_fraction": 0.636,
+    "curve_fraction": 0.762,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 15

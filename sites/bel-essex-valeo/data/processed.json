@@ -1,9 +1,9 @@
 {
   "plant": "Bel Essex (Valeo)",
-  "last_updated": "2026-04-17 13:57 SAST",
+  "last_updated": "2026-04-17 15:17 SAST",
   "date": "2026-04-17",
-  "total_kwh": 2190.53,
-  "last_hour": 12,
+  "total_kwh": 2577.27,
+  "last_hour": 13,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -25,7 +25,7 @@
       472.53,
       512.06,
       523.5,
-      0.0,
+      386.74,
       0.0,
       0.0,
       0.0,
@@ -38,8 +38,8 @@
       0.0
     ],
     "irradiation": [
-      0,
-      0,
+      0.0,
+      0.0,
       0,
       0,
       0,
@@ -78,7 +78,7 @@
     472.53,
     512.06,
     523.5,
-    0.0,
+    386.74,
     0.0,
     0.0,
     0.0,
@@ -91,8 +91,8 @@
     0.0
   ],
   "irradiation": [
-    0,
-    0,
+    0.0,
+    0.0,
     0,
     0,
     0,
@@ -1187,7 +1187,7 @@
       "last_hour": 18
     },
     "2026-04-17": {
-      "total_kwh": 2190.53,
+      "total_kwh": 2577.27,
       "hourly": [
         0.0,
         0.0,
@@ -1202,7 +1202,7 @@
         472.53,
         512.06,
         523.5,
-        0.0,
+        386.74,
         0.0,
         0.0,
         0.0,
@@ -1215,8 +1215,8 @@
         0.0
       ],
       "irradiation": [
-        0,
-        0,
+        0.0,
+        0.0,
         0,
         0,
         0,
@@ -1240,8 +1240,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-17 13:57 SAST",
-      "last_hour": 12
+      "last_updated": "2026-04-17 15:17 SAST",
+      "last_hour": 13
     }
   },
   "thresholds": {
@@ -1252,15 +1252,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 139,
-    "expected_by_now": 1579.3,
-    "effective_expected": 2008.4,
-    "irrad_factor": 1.272,
-    "actual_kwh": 2190.53,
-    "pace_trigger": 602.5,
-    "projected_total": 3444.2,
+    "pct_of_avg": 132,
+    "expected_by_now": 1948.6,
+    "effective_expected": 2453.2,
+    "irrad_factor": 1.259,
+    "actual_kwh": 2577.27,
+    "pace_trigger": 735.9,
+    "projected_total": 3383.3,
     "daily_min": 856.0,
-    "curve_fraction": 0.636,
+    "curve_fraction": 0.762,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 15

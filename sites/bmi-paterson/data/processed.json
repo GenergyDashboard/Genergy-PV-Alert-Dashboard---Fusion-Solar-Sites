@@ -1,9 +1,9 @@
 {
   "plant": "BMI Paterson",
-  "last_updated": "2026-04-17 13:57 SAST",
+  "last_updated": "2026-04-17 15:17 SAST",
   "date": "2026-04-17",
-  "total_kwh": 188.22,
-  "last_hour": 12,
+  "total_kwh": 228.31,
+  "last_hour": 13,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -25,7 +25,7 @@
       40.26,
       44.61,
       45.2,
-      0.0,
+      40.09,
       0.0,
       0.0,
       0.0,
@@ -38,8 +38,8 @@
       0.0
     ],
     "irradiation": [
-      0,
-      0,
+      0.0,
+      0.0,
       0,
       0,
       0,
@@ -78,7 +78,7 @@
     40.26,
     44.61,
     45.2,
-    0.0,
+    40.09,
     0.0,
     0.0,
     0.0,
@@ -91,8 +91,8 @@
     0.0
   ],
   "irradiation": [
-    0,
-    0,
+    0.0,
+    0.0,
     0,
     0,
     0,
@@ -1187,7 +1187,7 @@
       "last_hour": 18
     },
     "2026-04-17": {
-      "total_kwh": 188.22,
+      "total_kwh": 228.31,
       "hourly": [
         0.0,
         0.0,
@@ -1202,7 +1202,7 @@
         40.26,
         44.61,
         45.2,
-        0.0,
+        40.09,
         0.0,
         0.0,
         0.0,
@@ -1215,8 +1215,8 @@
         0.0
       ],
       "irradiation": [
-        0,
-        0,
+        0.0,
+        0.0,
         0,
         0,
         0,
@@ -1240,8 +1240,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-17 13:57 SAST",
-      "last_hour": 12
+      "last_updated": "2026-04-17 15:17 SAST",
+      "last_hour": 13
     }
   },
   "thresholds": {
@@ -1252,15 +1252,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 130,
-    "expected_by_now": 144.5,
-    "effective_expected": 181.5,
-    "irrad_factor": 1.256,
-    "actual_kwh": 188.22,
-    "pace_trigger": 54.5,
-    "projected_total": 295.9,
+    "pct_of_avg": 127,
+    "expected_by_now": 179.6,
+    "effective_expected": 220.9,
+    "irrad_factor": 1.23,
+    "actual_kwh": 228.31,
+    "pace_trigger": 66.3,
+    "projected_total": 299.7,
     "daily_min": 49.9,
-    "curve_fraction": 0.636,
+    "curve_fraction": 0.762,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 15
