@@ -162,7 +162,7 @@ def solar_curve_fraction(hour: int, month: int) -> float:
 # =============================================================================
 
 def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
-    """Fetch hourly irradiation from Open-Meteo with 3 retries and sanity check."""
+    """Fetch hourly irradiation from Open-Meteo with 3 retries and UTC→SAST shift."""
     last_err = None
     for attempt in range(3):
         try:
@@ -171,7 +171,6 @@ def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
                 params={
                     "latitude": lat, "longitude": lon,
                     "hourly": "shortwave_radiation",
-                    "timezone": "Africa/Johannesburg",
                     "start_date": date_str, "end_date": date_str,
                 },
                 timeout=20,
@@ -180,7 +179,13 @@ def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
             irrad = resp.json().get("hourly", {}).get("shortwave_radiation", [])
             while len(irrad) < 24:
                 irrad.append(0)
-            result = [round(v if v else 0, 1) for v in irrad[:24]]
+            utc_data = [round(v if v else 0, 1) for v in irrad[:24]]
+            # Shift UTC → SAST (+2 hours)
+            result = [0.0] * 24
+            for h in range(24):
+                sast_h = h + 2
+                if 0 <= sast_h <= 23:
+                    result[sast_h] = utc_data[h]
             # Sanity check: midday irradiation should be at least 10 W/m²
             midday = sum(result[10:15])
             if midday < 10:
