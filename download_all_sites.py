@@ -41,6 +41,7 @@ SITES = [
     {"search_name": "Shoprite Parklands",              "slug": "shoprite-parklands"},
     {"search_name": "WG Group - Mdantsane SuperSpar",  "slug": "wg-mdantsane-superspar"},
     {"search_name": "WG Group - Nurture Health",       "slug": "wg-nurture-health"},
+    {"search_name": "Nautica Shopping Centre",         "slug": "nautica-sc"},
 ]
 
 # =============================================================================
