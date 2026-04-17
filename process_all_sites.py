@@ -81,6 +81,11 @@ SITES = {
         "lat": -33.97422273793887,
         "lon": 25.61212584301634,
     },
+    "nautica-sc": {
+        "display_name": "Nautica Shopping Centre",
+        "lat": -33.0442526611805,
+        "lon": 18.052321330929125,
+    },
     "rdm-somerset-west": {
         "display_name": "RDM Somerset West 5MW",
         "lat": -34.06499500593473,
