@@ -1,9 +1,9 @@
 {
   "plant": "Keypak Part 2",
-  "last_updated": "2026-04-18 07:15 SAST",
+  "last_updated": "2026-04-18 09:12 SAST",
   "date": "2026-04-18",
-  "total_kwh": 0.0,
-  "last_hour": 0,
+  "total_kwh": 10.42,
+  "last_hour": 7,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -18,8 +18,8 @@
       0.0,
       0.0,
       0.0,
-      0.0,
-      0.0,
+      0.65,
+      9.77,
       0.0,
       0.0,
       0.0,
@@ -71,8 +71,8 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
+    0.65,
+    9.77,
     0.0,
     0.0,
     0.0,
@@ -1244,7 +1244,7 @@
       "last_hour": 17
     },
     "2026-04-18": {
-      "total_kwh": 0.0,
+      "total_kwh": 10.42,
       "hourly": [
         0.0,
         0.0,
@@ -1252,8 +1252,8 @@
         0.0,
         0.0,
         0.0,
-        0.0,
-        0.0,
+        0.65,
+        9.77,
         0.0,
         0.0,
         0.0,
@@ -1297,8 +1297,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-18 07:15 SAST",
-      "last_hour": 0
+      "last_updated": "2026-04-18 09:12 SAST",
+      "last_hour": 7
     }
   },
   "thresholds": {
@@ -1309,7 +1309,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "reason": "nighttime",
+    "reason": "too early",
     "sample_days": 16
   }
 }
