@@ -1,9 +1,9 @@
 {
   "plant": "Kirkwood Spar",
-  "last_updated": "2026-04-19 07:36 SAST",
+  "last_updated": "2026-04-19 09:23 SAST",
   "date": "2026-04-19",
-  "total_kwh": 0.27,
-  "last_hour": 6,
+  "total_kwh": 5.25,
+  "last_hour": 7,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -19,7 +19,7 @@
       0.0,
       0.0,
       0.27,
-      0.0,
+      4.98,
       0.0,
       0.0,
       0.0,
@@ -72,7 +72,7 @@
     0.0,
     0.0,
     0.27,
-    0.0,
+    4.98,
     0.0,
     0.0,
     0.0,
@@ -560,7 +560,7 @@
       "last_hour": 18
     },
     "2026-04-19": {
-      "total_kwh": 0.27,
+      "total_kwh": 5.25,
       "hourly": [
         0.0,
         0.0,
@@ -569,7 +569,7 @@
         0.0,
         0.0,
         0.27,
-        0.0,
+        4.98,
         0.0,
         0.0,
         0.0,
@@ -613,8 +613,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-19 07:36 SAST",
-      "last_hour": 6
+      "last_updated": "2026-04-19 09:23 SAST",
+      "last_hour": 7
     }
   },
   "thresholds": {
