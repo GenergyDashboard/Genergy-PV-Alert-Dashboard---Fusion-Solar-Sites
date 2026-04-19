@@ -1,13 +1,13 @@
 {
   "plant": "Mountain View Shopping Centre",
-  "last_updated": "2026-04-19 17:44 SAST",
+  "last_updated": "2026-04-19 18:45 SAST",
   "date": "2026-04-19",
-  "total_kwh": 413.94,
-  "last_hour": 16,
-  "status": "low",
+  "total_kwh": 425.41,
+  "last_hour": 17,
+  "status": "ok",
   "alerts": {
     "offline": false,
-    "pace_low": true,
+    "pace_low": false,
     "total_low": false
   },
   "today": {
@@ -29,7 +29,7 @@
       93.77,
       50.3,
       23.55,
-      0.0,
+      11.47,
       0.0,
       0.0,
       0.0,
@@ -53,10 +53,10 @@
       690.0,
       715.0,
       658.0,
-      515.0,
-      348.0,
-      163.0,
-      26.0,
+      550.0,
+      383.0,
+      175.0,
+      32.0,
       0,
       0,
       0,
@@ -82,7 +82,7 @@
     93.77,
     50.3,
     23.55,
-    0.0,
+    11.47,
     0.0,
     0.0,
     0.0,
@@ -106,10 +106,10 @@
     690.0,
     715.0,
     658.0,
-    515.0,
-    348.0,
-    163.0,
-    26.0,
+    550.0,
+    383.0,
+    175.0,
+    32.0,
     0,
     0,
     0,
@@ -1301,7 +1301,7 @@
       "last_hour": 18
     },
     "2026-04-19": {
-      "total_kwh": 413.94,
+      "total_kwh": 425.41,
       "hourly": [
         0.0,
         0.0,
@@ -1320,7 +1320,7 @@
         93.77,
         50.3,
         23.55,
-        0.0,
+        11.47,
         0.0,
         0.0,
         0.0,
@@ -1344,18 +1344,18 @@
         690.0,
         715.0,
         658.0,
-        515.0,
-        348.0,
-        163.0,
-        26.0,
+        550.0,
+        383.0,
+        175.0,
+        32.0,
         0,
         0,
         0,
         0,
         0
       ],
-      "last_updated": "2026-04-19 17:44 SAST",
-      "last_hour": 16
+      "last_updated": "2026-04-19 18:45 SAST",
+      "last_hour": 17
     }
   },
   "thresholds": {
@@ -1366,17 +1366,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 26,
-    "expected_by_now": 1609.2,
-    "effective_expected": 2011.7,
-    "irrad_factor": 1.25,
-    "actual_kwh": 413.94,
-    "pace_trigger": 603.5,
-    "projected_total": 417.8,
-    "daily_min": 282.2,
-    "curve_fraction": 0.991,
-    "sunrise": 6.3,
-    "sunset": 17.7,
+    "reason": "nighttime",
     "sample_days": 17
   }
 }
