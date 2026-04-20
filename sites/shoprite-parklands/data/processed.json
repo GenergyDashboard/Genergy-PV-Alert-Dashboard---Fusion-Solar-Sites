@@ -1,9 +1,9 @@
 {
   "plant": "Shoprite Parklands",
-  "last_updated": "2026-04-20 12:10 SAST",
+  "last_updated": "2026-04-20 13:28 SAST",
   "date": "2026-04-20",
-  "total_kwh": 163.53,
-  "last_hour": 10,
+  "total_kwh": 364.46,
+  "last_hour": 12,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -23,8 +23,8 @@
       31.39,
       52.19,
       75.84,
-      0.0,
-      0.0,
+      108.35,
+      92.58,
       0.0,
       0.0,
       0.0,
@@ -38,7 +38,6 @@
       0.0
     ],
     "irradiation": [
-      0.0,
       0.0,
       0,
       0,
@@ -61,6 +60,7 @@
       0,
       0,
       0,
+      0,
       0
     ]
   },
@@ -76,8 +76,8 @@
     31.39,
     52.19,
     75.84,
-    0.0,
-    0.0,
+    108.35,
+    92.58,
     0.0,
     0.0,
     0.0,
@@ -91,7 +91,6 @@
     0.0
   ],
   "irradiation": [
-    0.0,
     0.0,
     0,
     0,
@@ -111,6 +110,7 @@
     272.0,
     89.0,
     2.0,
+    0,
     0,
     0,
     0,
@@ -1358,7 +1358,7 @@
       "last_hour": 18
     },
     "2026-04-20": {
-      "total_kwh": 163.53,
+      "total_kwh": 364.46,
       "hourly": [
         0.0,
         0.0,
@@ -1371,8 +1371,8 @@
         31.39,
         52.19,
         75.84,
-        0.0,
-        0.0,
+        108.35,
+        92.58,
         0.0,
         0.0,
         0.0,
@@ -1386,7 +1386,6 @@
         0.0
       ],
       "irradiation": [
-        0.0,
         0.0,
         0,
         0,
@@ -1409,10 +1408,11 @@
         0,
         0,
         0,
+        0,
         0
       ],
-      "last_updated": "2026-04-20 12:10 SAST",
-      "last_hour": 10
+      "last_updated": "2026-04-20 13:28 SAST",
+      "last_hour": 12
     }
   },
   "thresholds": {
@@ -1424,14 +1424,14 @@
   },
   "debug": {
     "pct_of_avg": 111,
-    "expected_by_now": 147.4,
-    "effective_expected": 176.1,
-    "irrad_factor": 1.194,
-    "actual_kwh": 163.53,
-    "pace_trigger": 52.8,
-    "projected_total": 449.3,
+    "expected_by_now": 329.4,
+    "effective_expected": 494.1,
+    "irrad_factor": 1.5,
+    "actual_kwh": 364.46,
+    "pace_trigger": 148.2,
+    "projected_total": 573.0,
     "daily_min": 82.5,
-    "curve_fraction": 0.364,
+    "curve_fraction": 0.636,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 18

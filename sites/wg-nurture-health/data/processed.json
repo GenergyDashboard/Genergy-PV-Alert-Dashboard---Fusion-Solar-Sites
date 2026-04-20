@@ -1,9 +1,9 @@
 {
   "plant": "WG Group - Nurture Health",
-  "last_updated": "2026-04-20 12:10 SAST",
+  "last_updated": "2026-04-20 13:28 SAST",
   "date": "2026-04-20",
-  "total_kwh": 56.21,
-  "last_hour": 10,
+  "total_kwh": 102.69,
+  "last_hour": 12,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -23,8 +23,8 @@
       11.94,
       17.84,
       21.74,
-      0.0,
-      0.0,
+      23.41,
+      23.07,
       0.0,
       0.0,
       0.0,
@@ -38,7 +38,6 @@
       0.0
     ],
     "irradiation": [
-      0.0,
       0.0,
       0,
       0,
@@ -61,6 +60,7 @@
       0,
       0,
       0,
+      0,
       0
     ]
   },
@@ -76,8 +76,8 @@
     11.94,
     17.84,
     21.74,
-    0.0,
-    0.0,
+    23.41,
+    23.07,
     0.0,
     0.0,
     0.0,
@@ -91,7 +91,6 @@
     0.0
   ],
   "irradiation": [
-    0.0,
     0.0,
     0,
     0,
@@ -110,6 +109,7 @@
     387.0,
     187.0,
     24.0,
+    0,
     0,
     0,
     0,
@@ -1358,7 +1358,7 @@
       "last_hour": 17
     },
     "2026-04-20": {
-      "total_kwh": 56.21,
+      "total_kwh": 102.69,
       "hourly": [
         0.0,
         0.0,
@@ -1371,8 +1371,8 @@
         11.94,
         17.84,
         21.74,
-        0.0,
-        0.0,
+        23.41,
+        23.07,
         0.0,
         0.0,
         0.0,
@@ -1386,7 +1386,6 @@
         0.0
       ],
       "irradiation": [
-        0.0,
         0.0,
         0,
         0,
@@ -1409,10 +1408,11 @@
         0,
         0,
         0,
+        0,
         0
       ],
-      "last_updated": "2026-04-20 12:10 SAST",
-      "last_hour": 10
+      "last_updated": "2026-04-20 13:28 SAST",
+      "last_hour": 12
     }
   },
   "thresholds": {
@@ -1423,15 +1423,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 135,
-    "expected_by_now": 41.5,
-    "effective_expected": 52.4,
-    "irrad_factor": 1.263,
-    "actual_kwh": 56.21,
-    "pace_trigger": 15.7,
-    "projected_total": 154.4,
+    "pct_of_avg": 129,
+    "expected_by_now": 79.7,
+    "effective_expected": 119.5,
+    "irrad_factor": 1.5,
+    "actual_kwh": 102.69,
+    "pace_trigger": 35.9,
+    "projected_total": 161.5,
     "daily_min": 72.9,
-    "curve_fraction": 0.364,
+    "curve_fraction": 0.636,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 18

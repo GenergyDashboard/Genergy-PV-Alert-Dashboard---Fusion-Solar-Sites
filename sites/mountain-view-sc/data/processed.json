@@ -1,13 +1,13 @@
 {
   "plant": "Mountain View Shopping Centre",
-  "last_updated": "2026-04-20 12:10 SAST",
+  "last_updated": "2026-04-20 13:28 SAST",
   "date": "2026-04-20",
-  "total_kwh": 183.09,
-  "last_hour": 10,
-  "status": "ok",
+  "total_kwh": 356.87,
+  "last_hour": 12,
+  "status": "low",
   "alerts": {
     "offline": false,
-    "pace_low": false,
+    "pace_low": true,
     "total_low": false
   },
   "today": {
@@ -23,8 +23,8 @@
       40.68,
       42.05,
       93.1,
-      0.0,
-      0.0,
+      103.91,
+      69.87,
       0.0,
       0.0,
       0.0,
@@ -38,7 +38,6 @@
       0.0
     ],
     "irradiation": [
-      0.0,
       0.0,
       0,
       0,
@@ -61,6 +60,7 @@
       0,
       0,
       0,
+      0,
       0
     ]
   },
@@ -76,8 +76,8 @@
     40.68,
     42.05,
     93.1,
-    0.0,
-    0.0,
+    103.91,
+    69.87,
     0.0,
     0.0,
     0.0,
@@ -91,7 +91,6 @@
     0.0
   ],
   "irradiation": [
-    0.0,
     0.0,
     0,
     0,
@@ -110,6 +109,7 @@
     355.0,
     195.0,
     34.0,
+    0,
     0,
     0,
     0,
@@ -1358,7 +1358,7 @@
       "last_hour": 18
     },
     "2026-04-20": {
-      "total_kwh": 183.09,
+      "total_kwh": 356.87,
       "hourly": [
         0.0,
         0.0,
@@ -1371,8 +1371,8 @@
         40.68,
         42.05,
         93.1,
-        0.0,
-        0.0,
+        103.91,
+        69.87,
         0.0,
         0.0,
         0.0,
@@ -1386,7 +1386,6 @@
         0.0
       ],
       "irradiation": [
-        0.0,
         0.0,
         0,
         0,
@@ -1409,10 +1408,11 @@
         0,
         0,
         0,
+        0,
         0
       ],
-      "last_updated": "2026-04-20 12:10 SAST",
-      "last_hour": 10
+      "last_updated": "2026-04-20 13:28 SAST",
+      "last_hour": 12
     }
   },
   "thresholds": {
@@ -1423,15 +1423,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 53,
-    "expected_by_now": 345.1,
-    "effective_expected": 470.3,
-    "irrad_factor": 1.363,
-    "actual_kwh": 183.09,
-    "pace_trigger": 141.1,
-    "projected_total": 503.0,
+    "pct_of_avg": 45,
+    "expected_by_now": 793.3,
+    "effective_expected": 1189.9,
+    "irrad_factor": 1.5,
+    "actual_kwh": 356.87,
+    "pace_trigger": 357.0,
+    "projected_total": 561.1,
     "daily_min": 282.2,
-    "curve_fraction": 0.364,
+    "curve_fraction": 0.636,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 18

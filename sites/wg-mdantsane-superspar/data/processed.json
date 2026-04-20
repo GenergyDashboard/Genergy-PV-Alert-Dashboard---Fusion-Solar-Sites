@@ -1,9 +1,9 @@
 {
   "plant": "WG Group - Mdantsane SuperSpar",
-  "last_updated": "2026-04-20 12:10 SAST",
+  "last_updated": "2026-04-20 13:28 SAST",
   "date": "2026-04-20",
-  "total_kwh": 407.88,
-  "last_hour": 10,
+  "total_kwh": 707.51,
+  "last_hour": 12,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -23,8 +23,8 @@
       91.12,
       131.76,
       147.38,
-      0.0,
-      0.0,
+      151.07,
+      148.56,
       0.0,
       0.0,
       0.0,
@@ -38,7 +38,6 @@
       0.0
     ],
     "irradiation": [
-      0.0,
       0.0,
       0,
       0,
@@ -61,6 +60,7 @@
       0,
       0,
       0,
+      0,
       0
     ]
   },
@@ -76,8 +76,8 @@
     91.12,
     131.76,
     147.38,
-    0.0,
-    0.0,
+    151.07,
+    148.56,
     0.0,
     0.0,
     0.0,
@@ -91,7 +91,6 @@
     0.0
   ],
   "irradiation": [
-    0.0,
     0.0,
     0,
     0,
@@ -110,6 +109,7 @@
     395.0,
     195.0,
     25.0,
+    0,
     0,
     0,
     0,
@@ -1358,7 +1358,7 @@
       "last_hour": 17
     },
     "2026-04-20": {
-      "total_kwh": 407.88,
+      "total_kwh": 707.51,
       "hourly": [
         0.0,
         0.0,
@@ -1371,8 +1371,8 @@
         91.12,
         131.76,
         147.38,
-        0.0,
-        0.0,
+        151.07,
+        148.56,
         0.0,
         0.0,
         0.0,
@@ -1386,7 +1386,6 @@
         0.0
       ],
       "irradiation": [
-        0.0,
         0.0,
         0,
         0,
@@ -1409,10 +1408,11 @@
         0,
         0,
         0,
+        0,
         0
       ],
-      "last_updated": "2026-04-20 12:10 SAST",
-      "last_hour": 10
+      "last_updated": "2026-04-20 13:28 SAST",
+      "last_hour": 12
     }
   },
   "thresholds": {
@@ -1423,15 +1423,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 157,
-    "expected_by_now": 260.0,
-    "effective_expected": 378.5,
-    "irrad_factor": 1.456,
-    "actual_kwh": 407.88,
-    "pace_trigger": 113.6,
-    "projected_total": 1120.6,
+    "pct_of_avg": 144,
+    "expected_by_now": 493.0,
+    "effective_expected": 739.5,
+    "irrad_factor": 1.5,
+    "actual_kwh": 707.51,
+    "pace_trigger": 221.8,
+    "projected_total": 1112.4,
     "daily_min": 0.6,
-    "curve_fraction": 0.364,
+    "curve_fraction": 0.636,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 18

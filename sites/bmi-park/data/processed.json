@@ -1,9 +1,9 @@
 {
   "plant": "BMI Park",
-  "last_updated": "2026-04-20 12:10 SAST",
+  "last_updated": "2026-04-20 13:28 SAST",
   "date": "2026-04-20",
-  "total_kwh": 1078.76,
-  "last_hour": 10,
+  "total_kwh": 1528.35,
+  "last_hour": 11,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -23,7 +23,7 @@
       229.72,
       346.12,
       423.61,
-      0.0,
+      449.59,
       0.0,
       0.0,
       0.0,
@@ -38,7 +38,6 @@
       0.0
     ],
     "irradiation": [
-      0.0,
       0.0,
       0,
       0,
@@ -61,6 +60,7 @@
       0,
       0,
       0,
+      0,
       0
     ]
   },
@@ -76,7 +76,7 @@
     229.72,
     346.12,
     423.61,
-    0.0,
+    449.59,
     0.0,
     0.0,
     0.0,
@@ -91,7 +91,6 @@
     0.0
   ],
   "irradiation": [
-    0.0,
     0.0,
     0,
     0,
@@ -110,6 +109,7 @@
     355.0,
     195.0,
     34.0,
+    0,
     0,
     0,
     0,
@@ -1358,7 +1358,7 @@
       "last_hour": 17
     },
     "2026-04-20": {
-      "total_kwh": 1078.76,
+      "total_kwh": 1528.35,
       "hourly": [
         0.0,
         0.0,
@@ -1371,7 +1371,7 @@
         229.72,
         346.12,
         423.61,
-        0.0,
+        449.59,
         0.0,
         0.0,
         0.0,
@@ -1386,7 +1386,6 @@
         0.0
       ],
       "irradiation": [
-        0.0,
         0.0,
         0,
         0,
@@ -1409,10 +1408,11 @@
         0,
         0,
         0,
+        0,
         0
       ],
-      "last_updated": "2026-04-20 12:10 SAST",
-      "last_hour": 10
+      "last_updated": "2026-04-20 13:28 SAST",
+      "last_hour": 11
     }
   },
   "thresholds": {
@@ -1424,14 +1424,14 @@
   },
   "debug": {
     "pct_of_avg": 139,
-    "expected_by_now": 778.5,
-    "effective_expected": 978.9,
-    "irrad_factor": 1.257,
-    "actual_kwh": 1078.76,
-    "pace_trigger": 293.7,
-    "projected_total": 2963.7,
+    "expected_by_now": 1101.2,
+    "effective_expected": 1651.7,
+    "irrad_factor": 1.5,
+    "actual_kwh": 1528.35,
+    "pace_trigger": 495.5,
+    "projected_total": 3056.7,
     "daily_min": 400.0,
-    "curve_fraction": 0.364,
+    "curve_fraction": 0.5,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 18

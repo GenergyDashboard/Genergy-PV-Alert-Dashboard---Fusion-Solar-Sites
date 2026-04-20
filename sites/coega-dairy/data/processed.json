@@ -1,9 +1,9 @@
 {
   "plant": "Coega Dairy",
-  "last_updated": "2026-04-20 12:10 SAST",
+  "last_updated": "2026-04-20 13:28 SAST",
   "date": "2026-04-20",
-  "total_kwh": 1486.86,
-  "last_hour": 10,
+  "total_kwh": 2124.53,
+  "last_hour": 11,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -23,7 +23,7 @@
       292.52,
       483.92,
       617.12,
-      0.0,
+      637.67,
       0.0,
       0.0,
       0.0,
@@ -38,7 +38,6 @@
       0.0
     ],
     "irradiation": [
-      0.0,
       0.0,
       0,
       0,
@@ -61,6 +60,7 @@
       0,
       0,
       0,
+      0,
       0
     ]
   },
@@ -76,7 +76,7 @@
     292.52,
     483.92,
     617.12,
-    0.0,
+    637.67,
     0.0,
     0.0,
     0.0,
@@ -91,7 +91,6 @@
     0.0
   ],
   "irradiation": [
-    0.0,
     0.0,
     0,
     0,
@@ -110,6 +109,7 @@
     355.0,
     195.0,
     34.0,
+    0,
     0,
     0,
     0,
@@ -1358,7 +1358,7 @@
       "last_hour": 17
     },
     "2026-04-20": {
-      "total_kwh": 1486.86,
+      "total_kwh": 2124.53,
       "hourly": [
         0.0,
         0.0,
@@ -1371,7 +1371,7 @@
         292.52,
         483.92,
         617.12,
-        0.0,
+        637.67,
         0.0,
         0.0,
         0.0,
@@ -1386,7 +1386,6 @@
         0.0
       ],
       "irradiation": [
-        0.0,
         0.0,
         0,
         0,
@@ -1409,10 +1408,11 @@
         0,
         0,
         0,
+        0,
         0
       ],
-      "last_updated": "2026-04-20 12:10 SAST",
-      "last_hour": 10
+      "last_updated": "2026-04-20 13:28 SAST",
+      "last_hour": 11
     }
   },
   "thresholds": {
@@ -1424,14 +1424,14 @@
   },
   "debug": {
     "pct_of_avg": 127,
-    "expected_by_now": 1167.1,
-    "effective_expected": 1467.5,
-    "irrad_factor": 1.257,
-    "actual_kwh": 1486.86,
-    "pace_trigger": 440.3,
-    "projected_total": 4084.9,
+    "expected_by_now": 1671.8,
+    "effective_expected": 2507.8,
+    "irrad_factor": 1.5,
+    "actual_kwh": 2124.53,
+    "pace_trigger": 752.3,
+    "projected_total": 4249.1,
     "daily_min": 905.5,
-    "curve_fraction": 0.364,
+    "curve_fraction": 0.5,
     "sunrise": 6.3,
     "sunset": 17.7,
     "sample_days": 18
