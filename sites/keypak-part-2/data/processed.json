@@ -1,9 +1,9 @@
 {
   "plant": "Keypak Part 2",
-  "last_updated": "2026-04-20 07:47 SAST",
+  "last_updated": "2026-04-20 10:09 SAST",
   "date": "2026-04-20",
-  "total_kwh": 0.55,
-  "last_hour": 6,
+  "total_kwh": 60.71,
+  "last_hour": 8,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -19,8 +19,8 @@
       0.0,
       0.0,
       0.55,
-      0.0,
-      0.0,
+      9.35,
+      50.81,
       0.0,
       0.0,
       0.0,
@@ -72,8 +72,8 @@
     0.0,
     0.0,
     0.55,
-    0.0,
-    0.0,
+    9.35,
+    50.81,
     0.0,
     0.0,
     0.0,
@@ -1358,7 +1358,7 @@
       "last_hour": 17
     },
     "2026-04-20": {
-      "total_kwh": 0.55,
+      "total_kwh": 60.71,
       "hourly": [
         0.0,
         0.0,
@@ -1367,8 +1367,8 @@
         0.0,
         0.0,
         0.55,
-        0.0,
-        0.0,
+        9.35,
+        50.81,
         0.0,
         0.0,
         0.0,
@@ -1411,8 +1411,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-20 07:47 SAST",
-      "last_hour": 6
+      "last_updated": "2026-04-20 10:09 SAST",
+      "last_hour": 8
     }
   },
   "thresholds": {
@@ -1423,7 +1423,17 @@
     "min_history_days": 7
   },
   "debug": {
-    "reason": "too early",
+    "pct_of_avg": 98,
+    "expected_by_now": 61.8,
+    "effective_expected": 73.4,
+    "irrad_factor": 1.186,
+    "actual_kwh": 60.71,
+    "pace_trigger": 22.0,
+    "projected_total": 459.1,
+    "daily_min": 292.2,
+    "curve_fraction": 0.132,
+    "sunrise": 6.3,
+    "sunset": 17.7,
     "sample_days": 18
   }
 }
