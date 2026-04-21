@@ -78,8 +78,8 @@ SITES = {
     },
     "mountain-view-sc": {
         "display_name": "Mountain View Shopping Centre",
-        "lat": -33.97422273793887,
-        "lon": 25.61212584301634,
+        "lat": -34.1553887056237,
+        "lon": 18.87210565550177,
     },
     "nautica-sc": {
         "display_name": "Nautica Shopping Centre",
