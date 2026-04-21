@@ -1,0 +1,30 @@
+name: Fix Irradiation History (one-time)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run irradiation fix
+        run: python fix_irradiation_history.py --apply
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add sites/*/data/history.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🔧 Fix irradiation history offset - $(date +'%Y-%m-%d %H:%M UTC')" && git push)
