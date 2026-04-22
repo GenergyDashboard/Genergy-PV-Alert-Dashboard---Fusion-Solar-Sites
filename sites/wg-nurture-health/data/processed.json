@@ -1,6 +1,6 @@
 {
   "plant": "WG Group - Nurture Health",
-  "last_updated": "2026-04-22 18:26 SAST",
+  "last_updated": "2026-04-22 19:47 SAST",
   "date": "2026-04-22",
   "total_kwh": 135.35,
   "last_hour": 17,
@@ -1525,7 +1525,7 @@
         0,
         0
       ],
-      "last_updated": "2026-04-22 18:26 SAST",
+      "last_updated": "2026-04-22 19:47 SAST",
       "last_hour": 17
     }
   },
