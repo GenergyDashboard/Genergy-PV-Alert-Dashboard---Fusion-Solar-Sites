@@ -26,7 +26,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install playwright pandas openpyxl requests
           python -m playwright install chromium
-          python -m playwright install-deps
+          timeout 120 python -m playwright install-deps || echo "⚠️ install-deps timed out — trying apt fallback..."
+          sudo apt-get update -o Acquire::Retries=3 -o Acquire::http::Timeout=30 2>/dev/null || true
+          sudo apt-get install -y --no-install-recommends libnss3 libatk-bridge2.0-0 libdrm2 libxcomposite1 libxdamage1 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2t64 libxshmfence1 2>/dev/null || sudo apt-get install -y --no-install-recommends libnss3 libatk-bridge2.0-0 libdrm2 libxcomposite1 libxdamage1 libxrandr2 libgbm1 libpango-1.0-0 libcairo2 libasound2 libxshmfence1 2>/dev/null || true
 
       - name: Run FusionSolar scraper
         env:
