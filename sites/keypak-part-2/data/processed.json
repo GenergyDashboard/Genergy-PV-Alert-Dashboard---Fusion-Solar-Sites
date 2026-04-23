@@ -1,6 +1,6 @@
 {
   "plant": "Keypak Part 2",
-  "last_updated": "2026-04-23 20:55 SAST",
+  "last_updated": "2026-04-23 22:17 SAST",
   "date": "2026-04-23",
   "total_kwh": 1411.05,
   "last_hour": 17,
@@ -1582,7 +1582,7 @@
         0,
         0
       ],
-      "last_updated": "2026-04-23 20:55 SAST",
+      "last_updated": "2026-04-23 22:17 SAST",
       "last_hour": 17
     }
   },
