@@ -78,8 +78,8 @@ SITES = {
     },
     "mountain-view-sc": {
         "display_name": "Mountain View Shopping Centre",
-        "lat": -34.1553887056237,
-        "lon": 18.87210565550177,
+        "lat": -33.97422273793887,
+        "lon": 25.61212584301634,
     },
     "nautica-sc": {
         "display_name": "Nautica Shopping Centre",
@@ -176,26 +176,29 @@ def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
                 timeout=20,
             )
             resp.raise_for_status()
-            irrad = resp.json().get("hourly", {}).get("shortwave_radiation", [])
+            data = resp.json()
+            if "error" in data:
+                raise ValueError(f"API error: {data['error']}")
+            irrad = data.get("hourly", {}).get("shortwave_radiation", [])
             while len(irrad) < 24:
                 irrad.append(0)
             utc_data = [round(v if v else 0, 1) for v in irrad[:24]]
-            # Shift UTC → SAST (+1 hour — Open-Meteo GMT is offset by 1 from true UTC)
+            # Shift UTC → SAST (+1 hour)
             result = [0.0] * 24
             for h in range(24):
                 sast_h = h + 1
                 if 0 <= sast_h <= 23:
                     result[sast_h] = utc_data[h]
-            # Sanity check: midday irradiation should be at least 10 W/m²
-            midday = sum(result[10:15])
-            if midday < 10:
-                raise ValueError(f"Midday irradiation suspiciously low: {midday:.1f} W/m²")
+            # Sanity: check if ANY hour has irradiation (not just midday)
+            total_irr = sum(result)
+            if total_irr < 1:
+                raise ValueError(f"Total irradiation is {total_irr:.1f} — likely API error")
             return result
         except Exception as e:
             last_err = e
             print(f"    ⚠️  Irradiation fetch attempt {attempt+1}/3 failed: {e}")
             if attempt < 2:
-                time.sleep(2 * (attempt + 1))
+                time.sleep(3 * (attempt + 1))  # 3s, 6s backoff
     print(f"    ❌ Irradiation unavailable after 3 attempts: {last_err}")
     return [0] * 24
 
@@ -531,7 +534,29 @@ def main():
         print(f"    📅 Date: {data['date']} | Plant: {data['plant_name']}")
         print(f"    ⚡ {data['total_kwh']:.1f} kWh | Last hour: {data['last_hour']:02d}:00")
 
+        # ── DATA VALIDATION: prevent crossover ────────────────────
+        # Check that the xlsx plant name matches what we expect for this site
+        expected_name = display_name.lower().replace(" ", "")
+        actual_name = data["plant_name"].lower().replace(" ", "")
+        # Fuzzy match: check if expected name is contained in actual or vice versa
+        name_ok = (expected_name in actual_name) or (actual_name in expected_name)
+        # Also accept if the slug keywords appear
+        slug_words = [w for w in slug.replace("-", " ").split() if len(w) > 2]
+        slug_match = all(w in actual_name for w in slug_words)
+        if not name_ok and not slug_match:
+            print(f"    ⚠️  PLANT NAME MISMATCH! Expected '{display_name}' but xlsx says '{data['plant_name']}'")
+            print(f"    ⚠️  Skipping this site to prevent data crossover")
+            send_telegram(
+                f"⚠️ <b>{display_name} — DATA MISMATCH</b>\n"
+                f"Expected plant: <b>{display_name}</b>\n"
+                f"XLSX contains: <b>{data['plant_name']}</b>\n"
+                f"This site was SKIPPED to prevent data crossover."
+            )
+            skipped_count += 1
+            continue
+
         irradiation = fetch_irradiation(data["date"], lat, lon)
+        time.sleep(1)  # Rate limit: avoid hitting Open-Meteo too fast
 
         history = load_history(history_file)
         history[data["date"]] = {
