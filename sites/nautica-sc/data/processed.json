@@ -1,6 +1,6 @@
 {
   "plant": "Nautica Shopping Centre",
-  "last_updated": "2026-04-25 20:58 SAST",
+  "last_updated": "2026-04-25 21:54 SAST",
   "date": "2026-04-25",
   "total_kwh": 1692.86,
   "last_hour": 18,
@@ -841,7 +841,7 @@
         0,
         0
       ],
-      "last_updated": "2026-04-25 20:58 SAST",
+      "last_updated": "2026-04-25 21:54 SAST",
       "last_hour": 18
     }
   },
