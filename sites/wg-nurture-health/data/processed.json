@@ -1,9 +1,9 @@
 {
   "plant": "WG Group - Nurture Health",
-  "last_updated": "2026-04-29 16:52 SAST",
+  "last_updated": "2026-04-29 18:38 SAST",
   "date": "2026-04-29",
-  "total_kwh": 138.45,
-  "last_hour": 15,
+  "total_kwh": 140.89,
+  "last_hour": 17,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -28,8 +28,8 @@
       19.42,
       15.36,
       9.22,
-      0.0,
-      0.0,
+      2.27,
+      0.17,
       0.0,
       0.0,
       0.0,
@@ -81,8 +81,8 @@
     19.42,
     15.36,
     9.22,
-    0.0,
-    0.0,
+    2.27,
+    0.17,
     0.0,
     0.0,
     0.0,
@@ -1871,7 +1871,7 @@
       "last_hour": 17
     },
     "2026-04-29": {
-      "total_kwh": 138.45,
+      "total_kwh": 140.89,
       "hourly": [
         0.0,
         0.0,
@@ -1889,8 +1889,8 @@
         19.42,
         15.36,
         9.22,
-        0.0,
-        0.0,
+        2.27,
+        0.17,
         0.0,
         0.0,
         0.0,
@@ -1924,8 +1924,8 @@
         0,
         0
       ],
-      "last_updated": "2026-04-29 16:52 SAST",
-      "last_hour": 15
+      "last_updated": "2026-04-29 18:38 SAST",
+      "last_hour": 17
     }
   },
   "thresholds": {
@@ -1936,17 +1936,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 115,
-    "expected_by_now": 120.4,
-    "effective_expected": 161.7,
-    "irrad_factor": 1.343,
-    "actual_kwh": 138.45,
-    "pace_trigger": 48.5,
-    "projected_total": 146.3,
-    "daily_min": 56.9,
-    "curve_fraction": 0.946,
-    "sunrise": 6.3,
-    "sunset": 17.7,
+    "reason": "nighttime",
     "sample_days": 27
   }
 }
