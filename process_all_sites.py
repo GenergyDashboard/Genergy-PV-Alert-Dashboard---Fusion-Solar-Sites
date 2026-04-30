@@ -41,6 +41,11 @@ SITES = {
         "lat": -33.783722863963575,
         "lon": 25.421007352846207,
     },
+    "bimbo-nrg": {
+        "display_name": "BIMBO NRG",
+        "lat": -33.922900,
+        "lon": 18.656970,
+    },
     "bmi-park": {
         "display_name": "BMI Park",
         "lat": -33.91606455874616,
@@ -55,6 +60,11 @@ SITES = {
         "display_name": "Coega Dairy",
         "lat": -33.91606455874616,
         "lon": 25.600899466686126,
+    },
+    "gm-hasty-tasty": {
+        "display_name": "GM-Hasty Tasty",
+        "lat": -33.9454485,
+        "lon": 25.6144943,
     },
     "keypak-part-2": {
         "display_name": "Keypak Part 2",
