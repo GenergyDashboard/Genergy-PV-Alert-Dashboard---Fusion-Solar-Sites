@@ -42,6 +42,8 @@ SITES = [
     {"search_name": "WG Group - Mdantsane SuperSpar",  "slug": "wg-mdantsane-superspar"},
     {"search_name": "WG Group - Nurture Health",       "slug": "wg-nurture-health"},
     {"search_name": "Nautica Shopping Centre",         "slug": "nautica-sc"},
+    {"search_name": "BIMBO NRG",                       "slug": "bimbo-nrg"},
+    {"search_name": "GM-Hasty Tasty",                  "slug": "gm-hasty-tasty"},
 ]
 
 # =============================================================================
