@@ -1,9 +1,9 @@
 {
   "plant": "Addo Spar",
-  "last_updated": "2026-05-02 09:27 SAST",
+  "last_updated": "2026-05-02 11:04 SAST",
   "date": "2026-05-02",
-  "total_kwh": 18.22,
-  "last_hour": 7,
+  "total_kwh": 217.89,
+  "last_hour": 9,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -20,8 +20,8 @@
       0.0,
       0.54,
       17.68,
-      0.0,
-      0.0,
+      70.46,
+      129.21,
       0.0,
       0.0,
       0.0,
@@ -73,8 +73,8 @@
     0.0,
     0.54,
     17.68,
-    0.0,
-    0.0,
+    70.46,
+    129.21,
     0.0,
     0.0,
     0.0,
@@ -1301,7 +1301,7 @@
       "last_hour": 17
     },
     "2026-05-02": {
-      "total_kwh": 18.22,
+      "total_kwh": 217.89,
       "hourly": [
         0.0,
         0.0,
@@ -1311,8 +1311,8 @@
         0.0,
         0.54,
         17.68,
-        0.0,
-        0.0,
+        70.46,
+        129.21,
         0.0,
         0.0,
         0.0,
@@ -1354,8 +1354,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-02 09:27 SAST",
-      "last_hour": 7
+      "last_updated": "2026-05-02 11:04 SAST",
+      "last_hour": 9
     }
   },
   "thresholds": {
@@ -1366,7 +1366,17 @@
     "min_history_days": 7
   },
   "debug": {
-    "reason": "too early",
+    "pct_of_avg": 103,
+    "expected_by_now": 211.4,
+    "effective_expected": 196.4,
+    "irrad_factor": 0.929,
+    "actual_kwh": 217.89,
+    "pace_trigger": 58.9,
+    "projected_total": 967.2,
+    "daily_min": 317.6,
+    "curve_fraction": 0.225,
+    "sunrise": 6.6,
+    "sunset": 17.4,
     "sample_days": 17
   }
 }
