@@ -1,9 +1,9 @@
 {
   "plant": "BMI Park",
-  "last_updated": "2026-05-03 13:53 SAST",
+  "last_updated": "2026-05-03 15:16 SAST",
   "date": "2026-05-03",
-  "total_kwh": 1690.34,
-  "last_hour": 12,
+  "total_kwh": 2058.96,
+  "last_hour": 13,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -25,7 +25,7 @@
       362.34,
       396.87,
       400.91,
-      0.0,
+      368.62,
       0.0,
       0.0,
       0.0,
@@ -54,7 +54,7 @@
       577.0,
       473.0,
       323.0,
-      146.0,
+      147.0,
       14.0,
       0,
       0,
@@ -78,7 +78,7 @@
     362.34,
     396.87,
     400.91,
-    0.0,
+    368.62,
     0.0,
     0.0,
     0.0,
@@ -107,7 +107,7 @@
     577.0,
     473.0,
     323.0,
-    146.0,
+    147.0,
     14.0,
     0,
     0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-05-03": {
-      "total_kwh": 1690.34,
+      "total_kwh": 2058.96,
       "hourly": [
         0.0,
         0.0,
@@ -2057,7 +2057,7 @@
         362.34,
         396.87,
         400.91,
-        0.0,
+        368.62,
         0.0,
         0.0,
         0.0,
@@ -2086,7 +2086,7 @@
         577.0,
         473.0,
         323.0,
-        146.0,
+        147.0,
         14.0,
         0,
         0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-03 13:53 SAST",
-      "last_hour": 12
+      "last_updated": "2026-05-03 15:16 SAST",
+      "last_hour": 13
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 111,
-    "expected_by_now": 1529.3,
-    "effective_expected": 1533.6,
-    "irrad_factor": 1.003,
-    "actual_kwh": 1690.34,
-    "pace_trigger": 460.1,
-    "projected_total": 2627.3,
+    "pct_of_avg": 110,
+    "expected_by_now": 1872.3,
+    "effective_expected": 1896.0,
+    "irrad_factor": 1.013,
+    "actual_kwh": 2058.96,
+    "pace_trigger": 568.8,
+    "projected_total": 2657.7,
     "daily_min": 400.0,
-    "curve_fraction": 0.643,
+    "curve_fraction": 0.775,
     "sunrise": 6.6,
     "sunset": 17.4,
     "sample_days": 30

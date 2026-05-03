@@ -1,9 +1,9 @@
 {
   "plant": "Keypak Part 2",
-  "last_updated": "2026-05-03 13:53 SAST",
+  "last_updated": "2026-05-03 15:16 SAST",
   "date": "2026-05-03",
-  "total_kwh": 692.21,
-  "last_hour": 12,
+  "total_kwh": 892.32,
+  "last_hour": 13,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -25,7 +25,7 @@
       151.82,
       188.18,
       205.88,
-      0.0,
+      200.11,
       0.0,
       0.0,
       0.0,
@@ -54,7 +54,7 @@
       577.0,
       473.0,
       323.0,
-      146.0,
+      147.0,
       14.0,
       0,
       0,
@@ -78,7 +78,7 @@
     151.82,
     188.18,
     205.88,
-    0.0,
+    200.11,
     0.0,
     0.0,
     0.0,
@@ -107,7 +107,7 @@
     577.0,
     473.0,
     323.0,
-    146.0,
+    147.0,
     14.0,
     0,
     0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-05-03": {
-      "total_kwh": 692.21,
+      "total_kwh": 892.32,
       "hourly": [
         0.0,
         0.0,
@@ -2057,7 +2057,7 @@
         151.82,
         188.18,
         205.88,
-        0.0,
+        200.11,
         0.0,
         0.0,
         0.0,
@@ -2086,7 +2086,7 @@
         577.0,
         473.0,
         323.0,
-        146.0,
+        147.0,
         14.0,
         0,
         0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-03 13:53 SAST",
-      "last_hour": 12
+      "last_updated": "2026-05-03 15:16 SAST",
+      "last_hour": 13
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 104,
-    "expected_by_now": 663.1,
-    "effective_expected": 763.0,
-    "irrad_factor": 1.151,
-    "actual_kwh": 692.21,
-    "pace_trigger": 228.9,
-    "projected_total": 1075.9,
+    "pct_of_avg": 105,
+    "expected_by_now": 849.5,
+    "effective_expected": 987.6,
+    "irrad_factor": 1.163,
+    "actual_kwh": 892.32,
+    "pace_trigger": 296.3,
+    "projected_total": 1151.8,
     "daily_min": 292.2,
-    "curve_fraction": 0.643,
+    "curve_fraction": 0.775,
     "sunrise": 6.6,
     "sunset": 17.4,
     "sample_days": 30
