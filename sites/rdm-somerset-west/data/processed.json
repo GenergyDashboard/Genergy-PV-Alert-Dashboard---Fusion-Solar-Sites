@@ -1,9 +1,9 @@
 {
   "plant": "RDM Somerset West 5MW",
-  "last_updated": "2026-05-05 12:34 SAST",
+  "last_updated": "2026-05-05 14:03 SAST",
   "date": "2026-05-05",
-  "total_kwh": 8677.62,
-  "last_hour": 11,
+  "total_kwh": 11807.63,
+  "last_hour": 12,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -24,7 +24,7 @@
       1966.99,
       2773.9,
       3134.64,
-      0.0,
+      3130.01,
       0.0,
       0.0,
       0.0,
@@ -77,7 +77,7 @@
     1966.99,
     2773.9,
     3134.64,
-    0.0,
+    3130.01,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 18
     },
     "2026-05-05": {
-      "total_kwh": 8677.62,
+      "total_kwh": 11807.63,
       "hourly": [
         0.0,
         0.0,
@@ -2056,7 +2056,7 @@
         1966.99,
         2773.9,
         3134.64,
-        0.0,
+        3130.01,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-05 12:34 SAST",
-      "last_hour": 11
+      "last_updated": "2026-05-05 14:03 SAST",
+      "last_hour": 12
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 132,
-    "expected_by_now": 6555.5,
-    "effective_expected": 9235.2,
-    "irrad_factor": 1.409,
-    "actual_kwh": 8677.62,
-    "pace_trigger": 2770.5,
-    "projected_total": 17355.2,
+    "pct_of_avg": 134,
+    "expected_by_now": 8791.4,
+    "effective_expected": 12174.8,
+    "irrad_factor": 1.385,
+    "actual_kwh": 11807.63,
+    "pace_trigger": 3652.4,
+    "projected_total": 18352.6,
     "daily_min": 3224.0,
-    "curve_fraction": 0.5,
+    "curve_fraction": 0.643,
     "sunrise": 6.6,
     "sunset": 17.4,
     "sample_days": 30

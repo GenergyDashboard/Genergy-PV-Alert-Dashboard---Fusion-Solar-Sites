@@ -1,9 +1,9 @@
 {
   "plant": "Shoprite Parklands",
-  "last_updated": "2026-05-05 12:34 SAST",
+  "last_updated": "2026-05-05 14:03 SAST",
   "date": "2026-05-05",
-  "total_kwh": 256.92,
-  "last_hour": 11,
+  "total_kwh": 349.02,
+  "last_hour": 12,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -24,7 +24,7 @@
       54.94,
       80.94,
       95.6,
-      0.0,
+      92.1,
       0.0,
       0.0,
       0.0,
@@ -77,7 +77,7 @@
     54.94,
     80.94,
     95.6,
-    0.0,
+    92.1,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 18
     },
     "2026-05-05": {
-      "total_kwh": 256.92,
+      "total_kwh": 349.02,
       "hourly": [
         0.0,
         0.0,
@@ -2056,7 +2056,7 @@
         54.94,
         80.94,
         95.6,
-        0.0,
+        92.1,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-05 12:34 SAST",
-      "last_hour": 11
+      "last_updated": "2026-05-05 14:03 SAST",
+      "last_hour": 12
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 116,
-    "expected_by_now": 221.8,
-    "effective_expected": 262.6,
-    "irrad_factor": 1.184,
-    "actual_kwh": 256.92,
-    "pace_trigger": 78.8,
-    "projected_total": 513.8,
+    "pct_of_avg": 113,
+    "expected_by_now": 309.5,
+    "effective_expected": 374.2,
+    "irrad_factor": 1.209,
+    "actual_kwh": 349.02,
+    "pace_trigger": 112.3,
+    "projected_total": 542.5,
     "daily_min": 82.5,
-    "curve_fraction": 0.5,
+    "curve_fraction": 0.643,
     "sunrise": 6.6,
     "sunset": 17.4,
     "sample_days": 30
