@@ -1,0 +1,36 @@
+name: Refresh Irradiation Data
+
+on:
+  schedule:
+    # Run at :15 and :45 past each hour (offset from main scraper at :05 and :35)
+    - cron: '15,45 3-19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-irradiation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Refresh irradiation for all sites
+        run: python refresh_irradiation.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add sites/*/data/history.json sites/*/data/processed.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "☀️ Refresh irradiation - $(date +'%Y-%m-%d %H:%M UTC')" && git pull --no-rebase -X ours && git push)
