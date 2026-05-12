@@ -1,9 +1,9 @@
 {
   "plant": "BMI Paterson",
-  "last_updated": "2026-05-12 15:36 SAST",
+  "last_updated": "2026-05-12 18:19 SAST",
   "date": "2026-05-12",
-  "total_kwh": 107.6,
-  "last_hour": 14,
+  "total_kwh": 113.24,
+  "last_hour": 16,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -27,8 +27,8 @@
       14.21,
       34.46,
       18.52,
-      0.0,
-      0.0,
+      3.66,
+      1.98,
       0.0,
       0.0,
       0.0,
@@ -80,8 +80,8 @@
     14.21,
     34.46,
     18.52,
-    0.0,
-    0.0,
+    3.66,
+    1.98,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-05-12": {
-      "total_kwh": 107.6,
+      "total_kwh": 113.24,
       "hourly": [
         0.0,
         0.0,
@@ -2059,8 +2059,8 @@
         14.21,
         34.46,
         18.52,
-        0.0,
-        0.0,
+        3.66,
+        1.98,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-12 15:36 SAST",
-      "last_hour": 14
+      "last_updated": "2026-05-12 18:19 SAST",
+      "last_hour": 16
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 53,
-    "expected_by_now": 204.4,
-    "effective_expected": 66.2,
-    "irrad_factor": 0.324,
-    "actual_kwh": 107.6,
-    "pace_trigger": 19.9,
-    "projected_total": 121.9,
+    "pct_of_avg": 48,
+    "expected_by_now": 234.9,
+    "effective_expected": 78.9,
+    "irrad_factor": 0.336,
+    "actual_kwh": 113.24,
+    "pace_trigger": 23.7,
+    "projected_total": 113.6,
     "daily_min": 49.9,
-    "curve_fraction": 0.883,
+    "curve_fraction": 0.997,
     "sunrise": 6.6,
     "sunset": 17.4,
     "sample_days": 30
