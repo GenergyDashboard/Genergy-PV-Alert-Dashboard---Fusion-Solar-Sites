@@ -1,6 +1,6 @@
 {
   "plant": "BIMBO NRG",
-  "last_updated": "2026-05-12 08:26 SAST",
+  "last_updated": "2026-05-12 10:39 SAST",
   "date": "2026-05-12",
   "total_kwh": 0.0,
   "last_hour": 0,
@@ -1069,7 +1069,7 @@
         0,
         0
       ],
-      "last_updated": "2026-05-12 08:26 SAST",
+      "last_updated": "2026-05-12 10:39 SAST",
       "last_hour": 0
     }
   },
