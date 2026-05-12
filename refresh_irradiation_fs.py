@@ -29,7 +29,7 @@ SITE_COORDS = {
     "bel-essex-valeo":       (-33.7837, 25.4210),
     "bimbo-nrg":             (-33.9229, 18.6570),
     "bmi-park":              (-33.9175, 25.5727),
-    "bmi-paterson":          (-33.4690, 26.1600),
+    "bmi-paterson":          (-33.9161, 25.6009),
     "coega-dairy":           (-33.9161, 25.6009),
     "gm-hasty-tasty":        (-33.9454, 25.6145),
     "keypak-part-2":         (-33.8654, 25.5718),
