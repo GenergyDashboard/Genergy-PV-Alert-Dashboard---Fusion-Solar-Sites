@@ -53,8 +53,8 @@ SITES = {
     },
     "bmi-paterson": {
         "display_name": "BMI Paterson",
-        "lat": -33.91606455874616,
-        "lon": 25.600899466686126,
+        "lat": -33.93559605866207,
+        "lon": 25.609333305564178,
     },
     "coega-dairy": {
         "display_name": "Coega Dairy",
