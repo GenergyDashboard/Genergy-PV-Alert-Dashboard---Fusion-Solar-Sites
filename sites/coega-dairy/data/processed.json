@@ -1,6 +1,6 @@
 {
   "plant": "Coega Dairy",
-  "last_updated": "2026-05-15 19:38 SAST",
+  "last_updated": "2026-05-15 21:21 SAST",
   "date": "2026-05-15",
   "total_kwh": 3572.28,
   "last_hour": 17,
@@ -2095,7 +2095,7 @@
         0,
         0
       ],
-      "last_updated": "2026-05-15 19:38 SAST",
+      "last_updated": "2026-05-15 21:21 SAST",
       "last_hour": 17
     }
   },
