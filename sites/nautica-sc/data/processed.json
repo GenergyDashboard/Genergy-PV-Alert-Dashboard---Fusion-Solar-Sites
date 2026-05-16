@@ -1,9 +1,9 @@
 {
   "plant": "Nautica Shopping Centre",
-  "last_updated": "2026-05-16 17:50 SAST",
+  "last_updated": "2026-05-16 19:09 SAST",
   "date": "2026-05-16",
-  "total_kwh": 2448.01,
-  "last_hour": 16,
+  "total_kwh": 2469.24,
+  "last_hour": 17,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -29,7 +29,7 @@
       332.96,
       244.47,
       123.32,
-      0.0,
+      21.23,
       0.0,
       0.0,
       0.0,
@@ -82,7 +82,7 @@
     332.96,
     244.47,
     123.32,
-    0.0,
+    21.23,
     0.0,
     0.0,
     0.0,
@@ -1985,7 +1985,7 @@
       "last_hour": 18
     },
     "2026-05-16": {
-      "total_kwh": 2448.01,
+      "total_kwh": 2469.24,
       "hourly": [
         0.0,
         0.0,
@@ -2004,7 +2004,7 @@
         332.96,
         244.47,
         123.32,
-        0.0,
+        21.23,
         0.0,
         0.0,
         0.0,
@@ -2038,8 +2038,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-16 17:50 SAST",
-      "last_hour": 16
+      "last_updated": "2026-05-16 19:09 SAST",
+      "last_hour": 17
     }
   },
   "thresholds": {
@@ -2050,17 +2050,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 127,
-    "expected_by_now": 1925.2,
-    "effective_expected": 2829.5,
-    "irrad_factor": 1.47,
-    "actual_kwh": 2448.01,
-    "pace_trigger": 848.9,
-    "projected_total": 2456.3,
-    "daily_min": 485.1,
-    "curve_fraction": 0.997,
-    "sunrise": 6.6,
-    "sunset": 17.4,
+    "reason": "nighttime",
     "sample_days": 29
   }
 }
