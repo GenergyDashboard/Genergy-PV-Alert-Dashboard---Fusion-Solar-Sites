@@ -1,9 +1,9 @@
 {
   "plant": "WG Group - Mdantsane SuperSpar",
-  "last_updated": "2026-05-21 16:27 SAST",
+  "last_updated": "2026-05-21 19:31 SAST",
   "date": "2026-05-21",
-  "total_kwh": 587.12,
-  "last_hour": 15,
+  "total_kwh": 593.76,
+  "last_hour": 17,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -28,8 +28,8 @@
       85.22,
       77.35,
       21.02,
-      0.0,
-      0.0,
+      6.48,
+      0.16,
       0.0,
       0.0,
       0.0,
@@ -81,8 +81,8 @@
     85.22,
     77.35,
     21.02,
-    0.0,
-    0.0,
+    6.48,
+    0.16,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-05-21": {
-      "total_kwh": 587.12,
+      "total_kwh": 593.76,
       "hourly": [
         0.0,
         0.0,
@@ -2060,8 +2060,8 @@
         85.22,
         77.35,
         21.02,
-        0.0,
-        0.0,
+        6.48,
+        0.16,
         0.0,
         0.0,
         0.0,
@@ -2070,24 +2070,24 @@
         0.0
       ],
       "irradiation": [
+        0.0,
         0,
         0,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
+        59.0,
+        215.0,
+        371.0,
+        476.0,
+        552.0,
+        544.0,
+        479.0,
+        380.0,
+        206.0,
+        55.0,
+        1.0,
         0,
         0,
         0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-21 16:27 SAST",
-      "last_hour": 15
+      "last_updated": "2026-05-21 19:31 SAST",
+      "last_hour": 17
     }
   },
   "thresholds": {
@@ -2107,17 +2107,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 84,
-    "expected_by_now": 695.4,
-    "effective_expected": 69.5,
-    "irrad_factor": 0.1,
-    "actual_kwh": 587.12,
-    "pace_trigger": 20.9,
-    "projected_total": 612.2,
-    "daily_min": 1.0,
-    "curve_fraction": 0.959,
-    "sunrise": 6.6,
-    "sunset": 17.4,
+    "reason": "nighttime",
     "sample_days": 30
   }
 }

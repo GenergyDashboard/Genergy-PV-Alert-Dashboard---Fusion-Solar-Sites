@@ -1,9 +1,9 @@
 {
   "plant": "MP The Pines",
-  "last_updated": "2026-05-21 16:27 SAST",
+  "last_updated": "2026-05-21 19:31 SAST",
   "date": "2026-05-21",
-  "total_kwh": 696.45,
-  "last_hour": 14,
+  "total_kwh": 789.02,
+  "last_hour": 17,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -27,9 +27,9 @@
       133.18,
       137.43,
       117.81,
-      0.0,
-      0.0,
-      0.0,
+      64.11,
+      24.81,
+      3.65,
       0.0,
       0.0,
       0.0,
@@ -80,9 +80,9 @@
     133.18,
     137.43,
     117.81,
-    0.0,
-    0.0,
-    0.0,
+    64.11,
+    24.81,
+    3.65,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 18
     },
     "2026-05-21": {
-      "total_kwh": 696.45,
+      "total_kwh": 789.02,
       "hourly": [
         0.0,
         0.0,
@@ -2059,9 +2059,9 @@
         133.18,
         137.43,
         117.81,
-        0.0,
-        0.0,
-        0.0,
+        64.11,
+        24.81,
+        3.65,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-21 16:27 SAST",
-      "last_hour": 14
+      "last_updated": "2026-05-21 19:31 SAST",
+      "last_hour": 17
     }
   },
   "thresholds": {
@@ -2107,17 +2107,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 112,
-    "expected_by_now": 622.9,
-    "effective_expected": 680.7,
-    "irrad_factor": 1.093,
-    "actual_kwh": 696.45,
-    "pace_trigger": 204.2,
-    "projected_total": 788.8,
-    "daily_min": 75.4,
-    "curve_fraction": 0.883,
-    "sunrise": 6.6,
-    "sunset": 17.4,
+    "reason": "nighttime",
     "sample_days": 30
   }
 }
