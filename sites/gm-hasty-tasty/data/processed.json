@@ -1,9 +1,9 @@
 {
   "plant": "GM-Hasty Tasty",
-  "last_updated": "2026-05-23 17:02 SAST",
+  "last_updated": "2026-05-23 18:13 SAST",
   "date": "2026-05-23",
-  "total_kwh": 730.41,
-  "last_hour": 15,
+  "total_kwh": 748.66,
+  "last_hour": 16,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -28,7 +28,7 @@
       112.37,
       89.82,
       55.37,
-      0.0,
+      18.25,
       0.0,
       0.0,
       0.0,
@@ -81,7 +81,7 @@
     112.37,
     89.82,
     55.37,
-    0.0,
+    18.25,
     0.0,
     0.0,
     0.0,
@@ -1643,7 +1643,7 @@
       "last_hour": 17
     },
     "2026-05-23": {
-      "total_kwh": 730.41,
+      "total_kwh": 748.66,
       "hourly": [
         0.0,
         0.0,
@@ -1661,7 +1661,7 @@
         112.37,
         89.82,
         55.37,
-        0.0,
+        18.25,
         0.0,
         0.0,
         0.0,
@@ -1696,8 +1696,8 @@
         0,
         0
       ],
-      "last_updated": "2026-05-23 17:02 SAST",
-      "last_hour": 15
+      "last_updated": "2026-05-23 18:13 SAST",
+      "last_hour": 16
     }
   },
   "thresholds": {
@@ -1708,15 +1708,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 129,
-    "expected_by_now": 566.0,
-    "effective_expected": 671.5,
-    "irrad_factor": 1.186,
-    "actual_kwh": 730.41,
-    "pace_trigger": 201.4,
-    "projected_total": 761.6,
+    "pct_of_avg": 128,
+    "expected_by_now": 583.4,
+    "effective_expected": 689.9,
+    "irrad_factor": 1.183,
+    "actual_kwh": 748.66,
+    "pace_trigger": 207.0,
+    "projected_total": 751.2,
     "daily_min": 119.3,
-    "curve_fraction": 0.959,
+    "curve_fraction": 0.997,
     "sunrise": 6.6,
     "sunset": 17.4,
     "sample_days": 23
