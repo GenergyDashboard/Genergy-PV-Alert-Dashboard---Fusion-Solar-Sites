@@ -172,9 +172,9 @@ def solar_curve_fraction(hour: int, month: int) -> float:
 # =============================================================================
 
 def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
-    """Fetch hourly irradiation from Open-Meteo with 3 retries and UTC→SAST shift."""
+    """Fetch hourly irradiation from Open-Meteo with 2 retries and UTC→SAST shift."""
     last_err = None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             resp = requests.get(
                 "https://api.open-meteo.com/v1/forecast",
@@ -183,7 +183,7 @@ def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
                     "hourly": "shortwave_radiation",
                     "start_date": date_str, "end_date": date_str,
                 },
-                timeout=20,
+                timeout=10,
             )
             resp.raise_for_status()
             data = resp.json()
@@ -199,17 +199,16 @@ def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
                 sast_h = h + 1
                 if 0 <= sast_h <= 23:
                     result[sast_h] = utc_data[h]
-            # Sanity: check if ANY hour has irradiation (not just midday)
             total_irr = sum(result)
             if total_irr < 1:
                 raise ValueError(f"Total irradiation is {total_irr:.1f} — likely API error")
             return result
         except Exception as e:
             last_err = e
-            print(f"    ⚠️  Irradiation fetch attempt {attempt+1}/3 failed: {e}")
-            if attempt < 2:
-                time.sleep(3 * (attempt + 1))  # 3s, 6s backoff
-    print(f"    ❌ Irradiation unavailable after 3 attempts: {last_err}")
+            print(f"    ⚠️  Irradiation fetch attempt {attempt+1}/2 failed: {e}")
+            if attempt < 1:
+                time.sleep(3)
+    print(f"    ❌ Irradiation unavailable after 2 attempts: {last_err}")
     return [0] * 24
 
 
@@ -565,10 +564,18 @@ def main():
             skipped_count += 1
             continue
 
-        irradiation = fetch_irradiation(data["date"], lat, lon)
-        time.sleep(1)  # Rate limit: avoid hitting Open-Meteo too fast
+        irradiation = None
+        # Check if history already has valid irradiation for today (from refresh_irradiation.py)
+        existing_history = load_history(history_file)
+        if data["date"] in existing_history:
+            existing_ir = existing_history[data["date"]].get("irradiation", [])
+            if existing_ir and sum(existing_ir) > 10:
+                irradiation = existing_ir
+                print(f"    ☀️  Using existing irradiation (sum={sum(existing_ir):.0f})")
+        if irradiation is None:
+            irradiation = fetch_irradiation(data["date"], lat, lon)
 
-        history = load_history(history_file)
+        history = existing_history
         history[data["date"]] = {
             "total_kwh":    data["total_kwh"],
             "hourly":       data["hourly"],
