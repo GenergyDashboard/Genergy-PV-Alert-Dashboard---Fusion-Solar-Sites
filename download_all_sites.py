@@ -42,8 +42,6 @@ SITES = [
     {"search_name": "WG Group - Mdantsane SuperSpar",  "slug": "wg-mdantsane-superspar"},
     {"search_name": "WG Group - Nurture Health",       "slug": "wg-nurture-health"},
     {"search_name": "Nautica Shopping Centre",         "slug": "nautica-sc"},
-    {"search_name": "BIMBO NRG",                       "slug": "bimbo-nrg"},
-    {"search_name": "GM-Hasty Tasty",                  "slug": "gm-hasty-tasty"},
 ]
 
 # =============================================================================
@@ -124,9 +122,8 @@ def fix_dns_resolution():
         sys.exit(1)
 
 
-def human_delay(min_s=3, max_s=7):
+def human_delay(min_s=1.5, max_s=3):
     delay = random.uniform(min_s, max_s)
-    print(f"  ⏳ Waiting {delay:.1f}s...")
     time.sleep(delay)
 
 
@@ -210,9 +207,8 @@ def download_site_report(page, search_name, output_file):
     print(f"\n  ── Downloading: {search_name} ──")
 
     # Navigate to portal home (clean slate for each site)
-    page.goto(PORTAL_HOME, wait_until="networkidle", timeout=60000)
-    human_delay(4, 7)
-    random_mouse_movement(page)
+    page.goto(PORTAL_HOME, wait_until="domcontentloaded", timeout=60000)
+    human_delay(2, 4)
     dismiss_modals(page)
 
     # Search for plant
@@ -222,11 +218,10 @@ def download_site_report(page, search_name, output_file):
         raise RuntimeError(f"Could not find search field for '{search_name}'")
 
     search_field.click()
-    human_delay(1, 2)
-    search_field.fill("")
     human_delay(0.5, 1)
-    type_human_like(search_field, search_name)
-    human_delay(2, 3)
+    search_field.fill("")
+    search_field.fill(search_name)
+    human_delay(1, 2)
 
     try:
         page.get_by_role("button", name="Search").click()
@@ -237,7 +232,7 @@ def download_site_report(page, search_name, output_file):
             search_field.press("Enter")
 
     page.wait_for_load_state("networkidle", timeout=30000)
-    human_delay(5, 8)
+    human_delay(3, 5)
 
     # Click on the plant
     print(f"  🏢 Selecting '{search_name}'...")
@@ -247,19 +242,18 @@ def download_site_report(page, search_name, output_file):
         page.get_by_text(search_name).first.click()
 
     page.wait_for_load_state("networkidle", timeout=60000)
-    human_delay(5, 8)
-    random_mouse_movement(page)
+    human_delay(3, 5)
 
     # Report Management
     print("  📊 Opening Report Management...")
     page.get_by_text("Report Management").click()
     page.wait_for_load_state("networkidle", timeout=60000)
-    human_delay(5, 8)
+    human_delay(3, 5)
 
     # Export
     print("  📤 Clicking Export...")
     page.get_by_role("button", name="Export").click()
-    human_delay(5, 8)
+    human_delay(3, 5)
 
     # Download
     print("  💾 Downloading...")
@@ -275,7 +269,7 @@ def download_site_report(page, search_name, output_file):
         page.get_by_role("button", name="Close").click()
     except Exception:
         pass
-    human_delay(2, 4)
+    human_delay(1, 2)
 
 
 # =============================================================================
@@ -325,17 +319,17 @@ def main():
             # ── Login once ─────────────────────────────────────────
             print("📱 Navigating to FusionSolar login...")
             page.goto(LOGIN_URL, wait_until="networkidle", timeout=60000)
-            human_delay(5, 8)
+            human_delay(3, 5)
 
             print("👤 Entering credentials...")
             page.get_by_role("textbox", name="Username or email").fill(username)
-            human_delay(1, 2)
+            human_delay(0.5, 1)
             page.get_by_role("textbox", name="Password").click()
             page.get_by_role("textbox", name="Password").fill(password)
-            human_delay(1, 2)
+            human_delay(0.5, 1)
             page.get_by_text("Log In").click()
             page.wait_for_load_state("networkidle", timeout=60000)
-            human_delay(7, 10)
+            human_delay(5, 8)
             print(f"  📍 After login: {page.url[:80]}")
 
             # ── Download each site ─────────────────────────────────
