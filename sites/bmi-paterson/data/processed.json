@@ -1,6 +1,6 @@
 {
   "plant": "BMI Paterson",
-  "last_updated": "2026-05-28 12:37 SAST",
+  "last_updated": "2026-05-28 13:08 SAST",
   "date": "2026-05-28",
   "total_kwh": 109.94,
   "last_hour": 11,
@@ -2095,7 +2095,7 @@
         0,
         0
       ],
-      "last_updated": "2026-05-28 12:37 SAST",
+      "last_updated": "2026-05-28 13:08 SAST",
       "last_hour": 11
     }
   },
