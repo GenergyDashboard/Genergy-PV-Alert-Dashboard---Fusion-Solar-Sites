@@ -29,6 +29,57 @@ from pathlib import Path
 
 import requests
 
+
+# =============================================================================
+# DNS FIX (GitHub runners can't resolve intl.fusionsolar.huawei.com)
+# =============================================================================
+
+FUSIONSOLAR_HOST = "intl.fusionsolar.huawei.com"
+FALLBACK_IP = "119.8.160.213"
+
+def fix_dns():
+    """Add /etc/hosts entry if DNS fails — same fix as the scraper."""
+    import socket
+    import subprocess
+    print(f"🔍 Checking DNS for {FUSIONSOLAR_HOST}...")
+    try:
+        ip = socket.gethostbyname(FUSIONSOLAR_HOST)
+        print(f"  ✅ DNS resolves: {FUSIONSOLAR_HOST} → {ip}")
+        return
+    except socket.gaierror:
+        print(f"  ⚠️  DNS failed, trying Google DNS fallback...")
+
+    # Try Google DNS directly
+    try:
+        import struct
+        result = subprocess.run(
+            ["nslookup", FUSIONSOLAR_HOST, "8.8.8.8"],
+            capture_output=True, text=True, timeout=10
+        )
+        for line in result.stdout.split("\n"):
+            line = line.strip()
+            if line.startswith("Address") and "8.8.8.8" not in line and "#" not in line:
+                ip = line.split()[-1]
+                if ip.count(".") == 3:
+                    FALLBACK_IP_RESOLVED = ip
+                    break
+        else:
+            FALLBACK_IP_RESOLVED = FALLBACK_IP
+    except Exception:
+        FALLBACK_IP_RESOLVED = FALLBACK_IP
+
+    print(f"  ⚠️  Using fallback IP: {FALLBACK_IP_RESOLVED}")
+    try:
+        with open("/etc/hosts", "a") as f:
+            f.write(f"\n{FALLBACK_IP_RESOLVED} {FUSIONSOLAR_HOST}\n")
+        print(f"  ✅ Added to /etc/hosts: {FALLBACK_IP_RESOLVED} {FUSIONSOLAR_HOST}")
+        # Verify
+        ip = socket.gethostbyname(FUSIONSOLAR_HOST)
+        print(f"  ✅ DNS now resolves: {FUSIONSOLAR_HOST} → {ip}")
+    except PermissionError:
+        print(f"  ❌ Cannot write /etc/hosts (no sudo). Try running with sudo or on a self-hosted runner.")
+        sys.exit(1)
+
 # =============================================================================
 # CONFIG
 # =============================================================================
@@ -176,6 +227,8 @@ def main():
     print(f"🚀 FusionSolar API Fetcher")
     print(f"🔐 Username: {username[:4]}***")
     print(f"🏢 Sites configured: {len(SITES)}")
+
+    fix_dns()
 
     api = FusionSolarAPI(username, password)
 
