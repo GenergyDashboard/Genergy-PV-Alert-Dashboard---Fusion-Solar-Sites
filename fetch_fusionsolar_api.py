@@ -22,6 +22,7 @@ To discover station codes:
 
 import json
 import os
+import socket
 import sys
 import time
 from datetime import datetime, timedelta, timezone
@@ -38,46 +39,68 @@ FUSIONSOLAR_HOST = "intl.fusionsolar.huawei.com"
 FALLBACK_IP = "119.8.160.213"
 
 def fix_dns():
-    """Add /etc/hosts entry if DNS fails — same fix as the scraper."""
-    import socket
+    """Ensure FUSIONSOLAR_HOST resolves; patch /etc/hosts if standard DNS fails.
+    Ported from the working GenergyDashboard-API fetch.py."""
     import subprocess
     print(f"🔍 Checking DNS for {FUSIONSOLAR_HOST}...")
     try:
         ip = socket.gethostbyname(FUSIONSOLAR_HOST)
-        print(f"  ✅ DNS resolves: {FUSIONSOLAR_HOST} → {ip}")
+        print(f"  ✅ DNS OK: {FUSIONSOLAR_HOST} → {ip}")
         return
     except socket.gaierror:
-        print(f"  ⚠️  DNS failed, trying Google DNS fallback...")
+        print(f"  ⚠️  DNS failed, trying Google DNS (8.8.8.8) fallback...")
 
-    # Try Google DNS directly
+    # Try dig against Google DNS
+    resolved_ip = None
     try:
-        import struct
         result = subprocess.run(
-            ["nslookup", FUSIONSOLAR_HOST, "8.8.8.8"],
-            capture_output=True, text=True, timeout=10
+            ["dig", "+short", FUSIONSOLAR_HOST, "@8.8.8.8"],
+            capture_output=True, text=True, timeout=10,
         )
-        for line in result.stdout.split("\n"):
-            line = line.strip()
-            if line.startswith("Address") and "8.8.8.8" not in line and "#" not in line:
-                ip = line.split()[-1]
-                if ip.count(".") == 3:
-                    FALLBACK_IP_RESOLVED = ip
-                    break
-        else:
-            FALLBACK_IP_RESOLVED = FALLBACK_IP
-    except Exception:
-        FALLBACK_IP_RESOLVED = FALLBACK_IP
+        ips = [l.strip() for l in result.stdout.strip().split("\n")
+               if l.strip() and not l.strip().endswith(".")]
+        if ips:
+            resolved_ip = ips[0]
+            print(f"  Resolved via Google DNS: {resolved_ip}")
+    except Exception as e:
+        print(f"  dig lookup failed: {e}")
 
-    print(f"  ⚠️  Using fallback IP: {FALLBACK_IP_RESOLVED}")
+    if not resolved_ip:
+        resolved_ip = FALLBACK_IP
+        print(f"  Using fallback IP: {resolved_ip}")
+
+    # Write to /etc/hosts via sudo (ubuntu-latest has passwordless sudo)
+    hosts_entry = f"{resolved_ip} {FUSIONSOLAR_HOST}\n"
     try:
-        with open("/etc/hosts", "a") as f:
-            f.write(f"\n{FALLBACK_IP_RESOLVED} {FUSIONSOLAR_HOST}\n")
-        print(f"  ✅ Added to /etc/hosts: {FALLBACK_IP_RESOLVED} {FUSIONSOLAR_HOST}")
-        # Verify
+        # Check if already patched
+        with open("/etc/hosts", "r") as f:
+            if FUSIONSOLAR_HOST in f.read():
+                print(f"  /etc/hosts already has an entry")
+                return
+        # Use sudo tee (works on GitHub Actions ubuntu-latest)
+        result = subprocess.run(
+            ["sudo", "tee", "-a", "/etc/hosts"],
+            input=hosts_entry, capture_output=True, text=True, timeout=5,
+        )
+        if result.returncode != 0:
+            raise RuntimeError(f"sudo tee failed: {result.stderr}")
+        print(f"  ✅ Added to /etc/hosts: {resolved_ip} {FUSIONSOLAR_HOST}")
+    except Exception as e:
+        # Last resort: try direct write
+        try:
+            with open("/etc/hosts", "a") as f:
+                f.write(hosts_entry)
+            print(f"  ✅ Added to /etc/hosts (direct write)")
+        except Exception as e2:
+            print(f"  ❌ Cannot patch /etc/hosts: {e2}")
+            sys.exit(1)
+
+    # Verify
+    try:
         ip = socket.gethostbyname(FUSIONSOLAR_HOST)
         print(f"  ✅ DNS now resolves: {FUSIONSOLAR_HOST} → {ip}")
-    except PermissionError:
-        print(f"  ❌ Cannot write /etc/hosts (no sudo). Try running with sudo or on a self-hosted runner.")
+    except socket.gaierror:
+        print(f"  ❌ DNS still failing after /etc/hosts patch")
         sys.exit(1)
 
 # =============================================================================
