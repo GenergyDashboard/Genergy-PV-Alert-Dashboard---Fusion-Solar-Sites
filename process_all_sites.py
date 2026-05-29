@@ -213,6 +213,22 @@ def fetch_irradiation(date_str: str, lat: float, lon: float) -> list:
 
 
 # =============================================================================
+def parse_api_json(filepath: Path) -> dict:
+    """
+    Parse a JSON file from the API fetcher.
+    Returns same format as parse_fusionsolar_report.
+    """
+    with open(filepath) as f:
+        raw = json.load(f)
+    return {
+        "plant_name": raw.get("plant_name", raw.get("search_name", "")),
+        "date":       raw.get("date", ""),
+        "total_kwh":  round(float(raw.get("total_kwh", 0)), 2),
+        "hourly":     raw.get("hourly_pv", [0.0] * 24),
+        "last_hour":  raw.get("last_hour", 0),
+    }
+
+
 # Parse a FusionSolar xlsx
 # =============================================================================
 
@@ -526,7 +542,8 @@ def main():
         display_name = config["display_name"]
         lat          = config["lat"]
         lon          = config["lon"]
-        raw_file     = RAW_DIR / f"{slug}.xlsx"
+        raw_json     = RAW_DIR / f"{slug}.json"
+        raw_xlsx     = RAW_DIR / f"{slug}.xlsx"
         site_dir     = SITES_DIR / slug / "data"
         history_file = site_dir / "history.json"
         output_file  = site_dir / "processed.json"
@@ -534,31 +551,37 @@ def main():
 
         print(f"\n  ── {display_name} ({slug}) ──")
 
-        if not raw_file.exists():
-            print(f"    ⚠️  No xlsx found: {raw_file} — skipping")
+        # Prefer API JSON over scraper XLSX
+        if raw_json.exists():
+            data = parse_api_json(raw_json)
+            print(f"    📡 Source: API JSON")
+        elif raw_xlsx.exists():
+            data = parse_fusionsolar_report(raw_xlsx)
+            print(f"    📄 Source: XLSX scraper")
+        else:
+            print(f"    ⚠️  No data found (checked .json and .xlsx) — skipping")
             skipped_count += 1
             continue
 
-        data = parse_fusionsolar_report(raw_file)
         print(f"    📅 Date: {data['date']} | Plant: {data['plant_name']}")
         print(f"    ⚡ {data['total_kwh']:.1f} kWh | Last hour: {data['last_hour']:02d}:00")
 
         # ── DATA VALIDATION: prevent crossover ────────────────────
-        # Check that the xlsx plant name matches what we expect for this site
+        # Check that the plant name matches what we expect for this site
         expected_name = display_name.lower().replace(" ", "")
         actual_name = data["plant_name"].lower().replace(" ", "")
-        # Fuzzy match: check if expected name is contained in actual or vice versa
         name_ok = (expected_name in actual_name) or (actual_name in expected_name)
-        # Also accept if the slug keywords appear
         slug_words = [w for w in slug.replace("-", " ").split() if len(w) > 2]
         slug_match = all(w in actual_name for w in slug_words)
-        if not name_ok and not slug_match:
-            print(f"    ⚠️  PLANT NAME MISMATCH! Expected '{display_name}' but xlsx says '{data['plant_name']}'")
+        # API JSON uses our configured name, so skip validation for JSON source
+        is_api = raw_json.exists()
+        if not is_api and not name_ok and not slug_match:
+            print(f"    ⚠️  PLANT NAME MISMATCH! Expected '{display_name}' but data says '{data['plant_name']}'")
             print(f"    ⚠️  Skipping this site to prevent data crossover")
             send_telegram(
                 f"⚠️ <b>{display_name} — DATA MISMATCH</b>\n"
                 f"Expected plant: <b>{display_name}</b>\n"
-                f"XLSX contains: <b>{data['plant_name']}</b>\n"
+                f"Data contains: <b>{data['plant_name']}</b>\n"
                 f"This site was SKIPPED to prevent data crossover."
             )
             skipped_count += 1
