@@ -1,0 +1,66 @@
+name: Backfill History Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Number of days to backfill (default: 3)'
+        required: false
+        default: '3'
+      date:
+        description: 'Specific date (YYYY-MM-DD, overrides days)'
+        required: false
+        default: ''
+      debug:
+        description: 'Debug mode (just print fields, no write)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pandas openpyxl
+
+      - name: Run backfill
+        env:
+          FUSIONSOLAR_API_USER: ${{ secrets.FUSIONSOLAR_API_USER }}
+          FUSIONSOLAR_API_PASS: ${{ secrets.FUSIONSOLAR_API_PASS }}
+        run: |
+          ARGS=""
+          if [ "${{ inputs.date }}" != "" ]; then
+            ARGS="--date ${{ inputs.date }}"
+          else
+            ARGS="--days ${{ inputs.days }}"
+          fi
+          if [ "${{ inputs.debug }}" = "true" ]; then
+            ARGS="$ARGS --debug"
+          fi
+          python backfill_history.py $ARGS
+
+      - name: Commit and push
+        if: inputs.debug != true
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add sites/*/data/history.json
+          git diff --quiet && git diff --staged --quiet && exit 0
+          git commit -m "Backfill history - $(date +'%Y-%m-%d %H:%M UTC')"
+          for i in 1 2 3; do
+            git pull --no-rebase -X ours && git push && break
+            sleep 5
+          done
