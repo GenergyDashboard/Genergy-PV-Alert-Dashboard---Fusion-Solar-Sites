@@ -333,10 +333,17 @@ def main():
                     hour = datetime.fromtimestamp(ct / 1000, tz=SAST).hour
                     # inverter_power = total PV output from inverters (kWh)
                     # PVYield = alternative field name on some accounts
-                    # ongrid_power = grid EXPORT only — do NOT use as PV total
-                    pv_val = float(dim.get("inverter_power", 0) or 0)
+                    inv_power = float(dim.get("inverter_power", 0) or 0)
+                    pv_yield = float(dim.get("PVYield", 0) or 0)
+                    pv_val = inv_power or pv_yield
+                    # Fallback: derive PV from consumption - grid import + grid export
+                    # PV = (use_power - buyPower) + ongrid_power
                     if pv_val == 0:
-                        pv_val = float(dim.get("PVYield", 0) or 0)
+                        use_power = float(dim.get("use_power", 0) or 0)
+                        buy_power = float(dim.get("buyPower", 0) or 0)
+                        ongrid = float(dim.get("ongrid_power", 0) or 0)
+                        if use_power > 0:
+                            pv_val = max(0, use_power - buy_power) + ongrid
                     hourly_pv[hour] += round(pv_val, 2)
 
             hourly_pv = [round(v, 2) for v in hourly_pv]
