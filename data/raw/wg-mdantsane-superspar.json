@@ -2,13 +2,13 @@
   "search_name": "WG Group - Mdantsane SuperSpar",
   "slug": "wg-mdantsane-superspar",
   "station_code": "NE=54891660",
-  "fetched_at_utc": "2026-06-01T22:11:36.363214",
+  "fetched_at_utc": "2026-06-02T06:14:43.806805",
   "date": "2026-06-02",
   "plant_name": "WG Group - Mdantsane SuperSpar",
-  "total_kwh": 0.0,
-  "day_power": 0.0,
-  "month_power": 830.74,
-  "total_power": 447277.6,
+  "total_kwh": 11.23,
+  "day_power": 11.23,
+  "month_power": 841.96,
+  "total_power": 447288.82,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -17,7 +17,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
+    0.08,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 0
+  "last_hour": 6
 }
