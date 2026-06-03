@@ -1,9 +1,9 @@
 {
   "plant": "BMI Park",
-  "last_updated": "2026-06-03 12:55 SAST",
+  "last_updated": "2026-06-03 15:18 SAST",
   "date": "2026-06-03",
-  "total_kwh": 126.22,
-  "last_hour": 11,
+  "total_kwh": 166.23,
+  "last_hour": 13,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -24,8 +24,8 @@
       16.35,
       25.55,
       41.7,
-      0.0,
-      0.0,
+      31.19,
+      27.82,
       0.0,
       0.0,
       0.0,
@@ -77,8 +77,8 @@
     16.35,
     25.55,
     41.7,
-    0.0,
-    0.0,
+    31.19,
+    27.82,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-06-03": {
-      "total_kwh": 126.22,
+      "total_kwh": 166.23,
       "hourly": [
         0.0,
         0.0,
@@ -2056,8 +2056,8 @@
         16.35,
         25.55,
         41.7,
-        0.0,
-        0.0,
+        31.19,
+        27.82,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-06-03 12:55 SAST",
-      "last_hour": 11
+      "last_updated": "2026-06-03 15:18 SAST",
+      "last_hour": 13
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 15,
-    "expected_by_now": 848.6,
-    "effective_expected": 144.8,
-    "irrad_factor": 0.171,
-    "actual_kwh": 126.22,
-    "pace_trigger": 43.4,
-    "projected_total": 252.4,
+    "pct_of_avg": 12,
+    "expected_by_now": 1363.0,
+    "effective_expected": 217.4,
+    "irrad_factor": 0.159,
+    "actual_kwh": 166.23,
+    "pace_trigger": 65.2,
+    "projected_total": 212.7,
     "daily_min": 273.0,
-    "curve_fraction": 0.5,
+    "curve_fraction": 0.781,
     "sunrise": 6.74,
     "sunset": 17.26,
     "sample_days": 30
