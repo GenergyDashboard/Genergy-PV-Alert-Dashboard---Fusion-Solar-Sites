@@ -35,7 +35,7 @@ SITE_COORDS = {
     "keypak-part-2":         (-33.8654, 25.5718),
     "kirkwood-fnb":          (-33.4040, 25.4400),
     "kirkwood-spar":         (-33.4040, 25.4400),
-    "mp-the-pines":          (-33.9197, 18.4459),
+    "mp-the-pines":          (-34.07578053077186, 18.8688475089106),
     "mountain-view-sc":      (-33.9742, 25.6121),
     "nautica-sc":            (-33.0443, 18.0523),
     "rdm-somerset-west":     (-34.0730, 18.8500),
