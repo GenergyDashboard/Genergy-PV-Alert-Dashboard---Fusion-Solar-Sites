@@ -83,8 +83,8 @@ SITES = {
     },
     "mp-the-pines": {
         "display_name": "MP The Pines",
-        "lat": -33.919655559259084,
-        "lon": 18.445906035596476,
+        "lat": -34.07578053077186,
+        "lon": 18.8688475089106,
     },
     "mountain-view-sc": {
         "display_name": "Mountain View Shopping Centre",
