@@ -2,13 +2,13 @@
   "search_name": "Mountain View shopping centre",
   "slug": "mountain-view-sc",
   "station_code": "NE=51613648",
-  "fetched_at_utc": "2026-06-04T15:15:17.363788",
+  "fetched_at_utc": "2026-06-04T18:15:22.786439",
   "date": "2026-06-04",
   "plant_name": "Mountain View shopping centre",
-  "total_kwh": 1323.85,
-  "day_power": 1323.85,
-  "month_power": 3636.68,
-  "total_power": 1573855.11,
+  "total_kwh": 1330.69,
+  "day_power": 1330.69,
+  "month_power": 3643.52,
+  "total_power": 1573861.95,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -27,8 +27,8 @@
     176.12,
     161.39,
     114.79,
-    0.0,
-    0.0,
+    83.82,
+    11.98,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 15
+  "last_hour": 17
 }
