@@ -2,13 +2,13 @@
   "search_name": "WG Group - Nurture Health",
   "slug": "wg-nurture-health",
   "station_code": "NE=54875772",
-  "fetched_at_utc": "2026-06-07T14:52:26.285690",
+  "fetched_at_utc": "2026-06-07T16:15:42.941208",
   "date": "2026-06-07",
   "plant_name": "WG Group - Nurture Health",
-  "total_kwh": 96.7,
-  "day_power": 96.7,
-  "month_power": 542.29,
-  "total_power": 74151.05,
+  "total_kwh": 96.82,
+  "day_power": 96.82,
+  "month_power": 542.41,
+  "total_power": 74151.17,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -27,7 +27,7 @@
     15.27,
     11.23,
     4.46,
-    0.0,
+    1.39,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 15
+  "last_hour": 16
 }

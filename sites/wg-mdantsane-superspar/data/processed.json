@@ -1,9 +1,9 @@
 {
   "plant": "WG Group - Mdantsane SuperSpar",
-  "last_updated": "2026-06-07 16:52 SAST",
+  "last_updated": "2026-06-07 18:15 SAST",
   "date": "2026-06-07",
-  "total_kwh": 773.53,
-  "last_hour": 15,
+  "total_kwh": 774.91,
+  "last_hour": 16,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -28,7 +28,7 @@
       116.05,
       95.72,
       43.28,
-      0.0,
+      17.25,
       0.0,
       0.0,
       0.0,
@@ -81,7 +81,7 @@
     116.05,
     95.72,
     43.28,
-    0.0,
+    17.25,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-06-07": {
-      "total_kwh": 773.53,
+      "total_kwh": 774.91,
       "hourly": [
         0.0,
         0.0,
@@ -2060,7 +2060,7 @@
         116.05,
         95.72,
         43.28,
-        0.0,
+        17.25,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-06-07 16:52 SAST",
-      "last_hour": 15
+      "last_updated": "2026-06-07 18:15 SAST",
+      "last_hour": 16
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 122,
-    "expected_by_now": 635.4,
-    "effective_expected": 679.8,
+    "pct_of_avg": 120,
+    "expected_by_now": 647.2,
+    "effective_expected": 692.5,
     "irrad_factor": 1.07,
-    "actual_kwh": 773.53,
-    "pace_trigger": 203.9,
-    "projected_total": 801.4,
+    "actual_kwh": 774.91,
+    "pace_trigger": 207.8,
+    "projected_total": 776.0,
     "daily_min": 0.2,
-    "curve_fraction": 0.965,
+    "curve_fraction": 0.999,
     "sunrise": 6.74,
     "sunset": 17.26,
     "sample_days": 29

@@ -2,13 +2,13 @@
   "search_name": "MP The Pines",
   "slug": "mp-the-pines",
   "station_code": "NE=50777603",
-  "fetched_at_utc": "2026-06-07T14:52:26.284482",
+  "fetched_at_utc": "2026-06-07T16:15:42.940412",
   "date": "2026-06-07",
   "plant_name": "MP The Pines",
-  "total_kwh": 470.71,
-  "day_power": 470.71,
-  "month_power": 4111.69,
-  "total_power": 1167953.31,
+  "total_kwh": 475.66,
+  "day_power": 475.66,
+  "month_power": 4116.64,
+  "total_power": 1167958.26,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -27,7 +27,7 @@
     49.5,
     48.14,
     45.74,
-    0.0,
+    30.43,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 15
+  "last_hour": 16
 }
