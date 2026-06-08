@@ -1,9 +1,9 @@
 {
   "plant": "Mountain View Shopping Centre",
-  "last_updated": "2026-06-08 15:08 SAST",
+  "last_updated": "2026-06-08 16:11 SAST",
   "date": "2026-06-08",
-  "total_kwh": 265.71,
-  "last_hour": 13,
+  "total_kwh": 287.75,
+  "last_hour": 14,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -26,7 +26,7 @@
       38.67,
       27.48,
       24.69,
-      0.0,
+      18.62,
       0.0,
       0.0,
       0.0,
@@ -79,7 +79,7 @@
     38.67,
     27.48,
     24.69,
-    0.0,
+    18.62,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-06-08": {
-      "total_kwh": 265.71,
+      "total_kwh": 287.75,
       "hourly": [
         0.0,
         0.0,
@@ -2058,7 +2058,7 @@
         38.67,
         27.48,
         24.69,
-        0.0,
+        18.62,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-06-08 15:08 SAST",
-      "last_hour": 13
+      "last_updated": "2026-06-08 16:11 SAST",
+      "last_hour": 14
     }
   },
   "thresholds": {
@@ -2107,15 +2107,15 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 35,
-    "expected_by_now": 769.3,
-    "effective_expected": 476.1,
-    "irrad_factor": 0.619,
-    "actual_kwh": 265.71,
-    "pace_trigger": 142.8,
-    "projected_total": 340.1,
+    "pct_of_avg": 31,
+    "expected_by_now": 931.5,
+    "effective_expected": 530.7,
+    "irrad_factor": 0.57,
+    "actual_kwh": 287.75,
+    "pace_trigger": 159.2,
+    "projected_total": 323.1,
     "daily_min": 66.1,
-    "curve_fraction": 0.781,
+    "curve_fraction": 0.891,
     "sunrise": 6.74,
     "sunset": 17.26,
     "sample_days": 30
