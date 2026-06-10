@@ -186,8 +186,8 @@ class FusionSolarAPI:
         except Exception:
             pass
 
-    def api_call(self, endpoint, body):
-        """Make an API call with rate limiting."""
+    def api_call(self, endpoint, body, _retried=False):
+        """Make an API call with auto-relogin on session expiry."""
         resp = self.session.post(
             f"{API_BASE}/{endpoint}",
             json=body,
@@ -195,7 +195,20 @@ class FusionSolarAPI:
         )
         resp.raise_for_status()
         data = resp.json()
-        if not data.get("success", True) and data.get("failCode"):
+        if data.get("success"):
+            return data
+        fail = data.get("failCode")
+        # 305 = session expired, 401 = invalid token
+        if fail in (305, 401) and not _retried:
+            print(f"  ⚠️  Session expired (failCode={fail}), re-logging in...")
+            self.login()
+            return self.api_call(endpoint, body, _retried=True)
+        # 407/429 = rate limited
+        if fail in (407, 429) and not _retried:
+            print(f"  ⚠️  Rate limited (failCode={fail}), waiting 60s...")
+            time.sleep(60)
+            return self.api_call(endpoint, body, _retried=True)
+        if not data.get("success", True) and fail:
             raise RuntimeError(f"API error: {data}")
         return data
 
@@ -293,7 +306,7 @@ def main():
                 realtime_map[code] = item.get("dataItemMap", {})
 
         print(f"  ✅ Got real-time data for {len(realtime_map)} stations")
-        time.sleep(INTER_CALL_SLEEP)
+        time.sleep(3)  # Short pause, session survives (auto-relogin handles expiry)
 
         # ── Step 2: Hourly KPIs (batched, 1 call) ─────────────────
         print(f"\n📈 Fetching hourly data for {today_str}...")
