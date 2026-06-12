@@ -2,13 +2,13 @@
   "search_name": "Nautica Shopping Centre",
   "slug": "nautica-sc",
   "station_code": "NE=51284622",
-  "fetched_at_utc": "2026-06-12T07:55:51.103877",
+  "fetched_at_utc": "2026-06-12T08:26:00.163195",
   "date": "2026-06-12",
   "plant_name": "Nautica Shopping Centre",
-  "total_kwh": 38.27,
-  "day_power": 38.27,
-  "month_power": 16565.64,
-  "total_power": 2135421.44,
+  "total_kwh": 65.76,
+  "day_power": 65.76,
+  "month_power": 16593.13,
+  "total_power": 2135448.93,
   "health_state": 2,
   "hourly_pv": [
     0.0,
@@ -20,7 +20,7 @@
     0.0,
     0.94,
     8.53,
-    0.0,
+    38.3,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 8
+  "last_hour": 9
 }
