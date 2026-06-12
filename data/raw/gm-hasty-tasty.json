@@ -2,13 +2,13 @@
   "search_name": "GM-Hasty Tasty",
   "slug": "gm-hasty-tasty",
   "station_code": "NE=85483210",
-  "fetched_at_utc": "2026-06-12T09:56:35.618926",
+  "fetched_at_utc": "2026-06-12T10:26:49.817576",
   "date": "2026-06-12",
   "plant_name": "GM-Hasty Tasty",
-  "total_kwh": 242.67,
-  "day_power": 242.67,
-  "month_power": 5048.12,
-  "total_power": 31385.15,
+  "total_kwh": 256.18,
+  "day_power": 256.18,
+  "month_power": 5061.63,
+  "total_power": 31398.66,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -22,7 +22,7 @@
     22.78,
     56.45,
     80.48,
-    0.0,
+    81.95,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 10
+  "last_hour": 11
 }
