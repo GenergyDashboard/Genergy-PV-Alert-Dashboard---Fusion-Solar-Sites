@@ -1,8 +1,8 @@
 {
   "plant": "Bel Essex (Valeo)",
-  "last_updated": "2026-06-12 09:25 SAST",
+  "last_updated": "2026-06-12 09:55 SAST",
   "date": "2026-06-12",
-  "total_kwh": 158.87,
+  "total_kwh": 261.66,
   "last_hour": 8,
   "status": "ok",
   "alerts": {
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-06-12": {
-      "total_kwh": 158.87,
+      "total_kwh": 261.66,
       "hourly": [
         0.0,
         0.0,
@@ -2095,7 +2095,7 @@
         0,
         0
       ],
-      "last_updated": "2026-06-12 09:25 SAST",
+      "last_updated": "2026-06-12 09:55 SAST",
       "last_hour": 8
     }
   },
@@ -2107,13 +2107,13 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 91,
+    "pct_of_avg": 150,
     "expected_by_now": 174.2,
     "effective_expected": 156.8,
     "irrad_factor": 0.9,
-    "actual_kwh": 158.87,
+    "actual_kwh": 261.66,
     "pace_trigger": 47.0,
-    "projected_total": 1452.0,
+    "projected_total": 2391.4,
     "daily_min": 217.3,
     "curve_fraction": 0.109,
     "sunrise": 6.74,
