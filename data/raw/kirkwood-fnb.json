@@ -2,13 +2,13 @@
   "search_name": "Kirkwood FNB",
   "slug": "kirkwood-fnb",
   "station_code": "NE=52476257",
-  "fetched_at_utc": "2026-06-13T06:58:20.120510",
+  "fetched_at_utc": "2026-06-13T10:06:10.839930",
   "date": "2026-06-13",
   "plant_name": "Kirkwood FNB",
-  "total_kwh": 4.85,
-  "day_power": 4.85,
-  "month_power": 854.98,
-  "total_power": 94756.01,
+  "total_kwh": 39.9,
+  "day_power": 39.9,
+  "month_power": 890.03,
+  "total_power": 94791.06,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -19,9 +19,9 @@
     0.0,
     0.0,
     0.53,
-    0.0,
-    0.0,
-    0.0,
+    4.82,
+    8.5,
+    12.9,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 7
+  "last_hour": 10
 }
