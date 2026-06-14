@@ -2,13 +2,13 @@
   "search_name": "Keypak Part 2",
   "slug": "keypak-part-2",
   "station_code": "NE=51089078",
-  "fetched_at_utc": "2026-06-14T07:22:54.291043",
+  "fetched_at_utc": "2026-06-14T10:48:22.982987",
   "date": "2026-06-14",
   "plant_name": "Keypak Part 2",
-  "total_kwh": 45.84,
-  "day_power": 45.84,
-  "month_power": 8773.85,
-  "total_power": 1281908.76,
+  "total_kwh": 491.3,
+  "day_power": 491.3,
+  "month_power": 9219.31,
+  "total_power": 1282354.22,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -20,9 +20,9 @@
     0.0,
     2.77,
     23.45,
-    0.0,
-    0.0,
-    0.0,
+    68.69,
+    110.31,
+    145.05,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 8
+  "last_hour": 11
 }
