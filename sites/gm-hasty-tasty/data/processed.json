@@ -1,6 +1,6 @@
 {
   "plant": "GM-Hasty Tasty",
-  "last_updated": "2026-06-16 20:27 SAST",
+  "last_updated": "2026-06-16 23:41 SAST",
   "date": "2026-06-16",
   "total_kwh": 519.67,
   "last_hour": 17,
@@ -2038,7 +2038,7 @@
         0,
         0
       ],
-      "last_updated": "2026-06-16 20:27 SAST",
+      "last_updated": "2026-06-16 23:41 SAST",
       "last_hour": 17
     }
   },
