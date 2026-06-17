@@ -2,13 +2,13 @@
   "search_name": "Coega Dairy",
   "slug": "coega-dairy",
   "station_code": "NE=51003907",
-  "fetched_at_utc": "2026-06-17T11:19:12.904861",
+  "fetched_at_utc": "2026-06-17T11:49:32.012141",
   "date": "2026-06-17",
   "plant_name": "Coega Dairy",
-  "total_kwh": 1903.53,
-  "day_power": 1903.53,
-  "month_power": 35133.65,
-  "total_power": 6066696.57,
+  "total_kwh": 2126.28,
+  "day_power": 2126.28,
+  "month_power": 35356.4,
+  "total_power": 6066919.32,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -23,7 +23,7 @@
     285.43,
     406.04,
     469.75,
-    0.0,
+    485.12,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 11
+  "last_hour": 12
 }
