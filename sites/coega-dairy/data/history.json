@@ -1710,7 +1710,7 @@
     "last_hour": 17
   },
   "2026-06-17": {
-    "total_kwh": 1180.81,
+    "total_kwh": 1423.95,
     "hourly": [
       0.0,
       0.0,
@@ -1763,7 +1763,7 @@
       0,
       0
     ],
-    "last_updated": "2026-06-17 11:48 SAST",
+    "last_updated": "2026-06-17 12:18 SAST",
     "last_hour": 10
   }
 }
