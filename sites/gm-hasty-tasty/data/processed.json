@@ -1,8 +1,8 @@
 {
   "plant": "GM-Hasty Tasty",
-  "last_updated": "2026-06-17 13:49 SAST",
+  "last_updated": "2026-06-17 14:19 SAST",
   "date": "2026-06-17",
-  "total_kwh": 456.8,
+  "total_kwh": 501.62,
   "last_hour": 12,
   "status": "ok",
   "alerts": {
@@ -1985,7 +1985,7 @@
       "last_hour": 17
     },
     "2026-06-17": {
-      "total_kwh": 456.8,
+      "total_kwh": 501.62,
       "hourly": [
         0.0,
         0.0,
@@ -2038,7 +2038,7 @@
         0,
         0
       ],
-      "last_updated": "2026-06-17 13:49 SAST",
+      "last_updated": "2026-06-17 14:19 SAST",
       "last_hour": 12
     }
   },
@@ -2050,13 +2050,13 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 154,
+    "pct_of_avg": 169,
     "expected_by_now": 297.1,
     "effective_expected": 340.1,
     "irrad_factor": 1.145,
-    "actual_kwh": 456.8,
+    "actual_kwh": 501.62,
     "pace_trigger": 102.0,
-    "projected_total": 705.8,
+    "projected_total": 775.1,
     "daily_min": 5.1,
     "curve_fraction": 0.647,
     "sunrise": 6.74,
