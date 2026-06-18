@@ -2,13 +2,13 @@
   "search_name": "BMI park",
   "slug": "bmi-park",
   "station_code": "NE=63713198",
-  "fetched_at_utc": "2026-06-18T12:25:58.084659",
+  "fetched_at_utc": "2026-06-18T13:29:39.798289",
   "date": "2026-06-18",
   "plant_name": "BMI park",
-  "total_kwh": 1489.82,
-  "day_power": 1489.82,
-  "month_power": 28284.21,
-  "total_power": 739925.27,
+  "total_kwh": 1638.91,
+  "day_power": 1638.91,
+  "month_power": 28433.3,
+  "total_power": 740074.36,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -25,7 +25,7 @@
     304.13,
     349.14,
     300.09,
-    0.0,
+    142.62,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 13
+  "last_hour": 14
 }
