@@ -2,13 +2,13 @@
   "search_name": "Bel Essex(Valeo)",
   "slug": "bel-essex-valeo",
   "station_code": "NE=56006848",
-  "fetched_at_utc": "2026-06-18T08:07:34.495041",
+  "fetched_at_utc": "2026-06-18T08:27:32.072376",
   "date": "2026-06-18",
   "plant_name": "Bel Essex(Valeo)",
-  "total_kwh": 352.05,
-  "day_power": 352.05,
-  "month_power": 30737.92,
-  "total_power": 1139501.1,
+  "total_kwh": 453.61,
+  "day_power": 453.61,
+  "month_power": 30839.48,
+  "total_power": 1139602.66,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -20,7 +20,7 @@
     0.0,
     12.4,
     93.9,
-    0.0,
+    221.78,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 8
+  "last_hour": 9
 }
