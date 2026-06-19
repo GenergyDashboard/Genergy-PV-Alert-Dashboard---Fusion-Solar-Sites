@@ -1,8 +1,8 @@
 {
   "plant": "WG Group - Nurture Health",
-  "last_updated": "2026-06-19 12:34 SAST",
+  "last_updated": "2026-06-19 13:04 SAST",
   "date": "2026-06-19",
-  "total_kwh": 53.59,
+  "total_kwh": 61.96,
   "last_hour": 11,
   "status": "ok",
   "alerts": {
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-06-19": {
-      "total_kwh": 53.59,
+      "total_kwh": 61.96,
       "hourly": [
         0.0,
         0.0,
@@ -2095,7 +2095,7 @@
         0,
         0
       ],
-      "last_updated": "2026-06-19 12:34 SAST",
+      "last_updated": "2026-06-19 13:04 SAST",
       "last_hour": 11
     }
   },
@@ -2107,13 +2107,13 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 122,
+    "pct_of_avg": 141,
     "expected_by_now": 44.0,
     "effective_expected": 41.2,
     "irrad_factor": 0.936,
-    "actual_kwh": 53.59,
+    "actual_kwh": 61.96,
     "pace_trigger": 12.4,
-    "projected_total": 107.2,
+    "projected_total": 123.9,
     "daily_min": 21.9,
     "curve_fraction": 0.5,
     "sunrise": 6.74,
