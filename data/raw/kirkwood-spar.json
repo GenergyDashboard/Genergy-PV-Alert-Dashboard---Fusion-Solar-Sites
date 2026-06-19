@@ -2,13 +2,13 @@
   "search_name": "kirkwood spar power meter",
   "slug": "kirkwood-spar",
   "station_code": "NE=64153308",
-  "fetched_at_utc": "2026-06-19T09:03:53.114604",
+  "fetched_at_utc": "2026-06-19T09:34:04.417749",
   "date": "2026-06-19",
   "plant_name": "kirkwood spar power meter",
-  "total_kwh": 49.35,
-  "day_power": 49.35,
-  "month_power": 3607.74,
-  "total_power": 129893.76,
+  "total_kwh": 70.56,
+  "day_power": 70.56,
+  "month_power": 3628.95,
+  "total_power": 129914.97,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -21,7 +21,7 @@
     1.05,
     8.16,
     13.8,
-    0.0,
+    26.34,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 9
+  "last_hour": 10
 }
