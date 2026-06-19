@@ -1,8 +1,8 @@
 {
   "plant": "Nautica Shopping Centre",
-  "last_updated": "2026-06-19 11:34 SAST",
+  "last_updated": "2026-06-19 12:04 SAST",
   "date": "2026-06-19",
-  "total_kwh": 574.56,
+  "total_kwh": 736.82,
   "last_hour": 10,
   "status": "ok",
   "alerts": {
@@ -2042,7 +2042,7 @@
       "last_hour": 18
     },
     "2026-06-19": {
-      "total_kwh": 574.56,
+      "total_kwh": 736.82,
       "hourly": [
         0.0,
         0.0,
@@ -2095,7 +2095,7 @@
         0,
         0
       ],
-      "last_updated": "2026-06-19 11:34 SAST",
+      "last_updated": "2026-06-19 12:04 SAST",
       "last_hour": 10
     }
   },
@@ -2107,13 +2107,13 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 178,
+    "pct_of_avg": 228,
     "expected_by_now": 323.2,
     "effective_expected": 413.2,
     "irrad_factor": 1.279,
-    "actual_kwh": 574.56,
+    "actual_kwh": 736.82,
     "pace_trigger": 124.0,
-    "projected_total": 1628.6,
+    "projected_total": 2088.5,
     "daily_min": 739.3,
     "curve_fraction": 0.353,
     "sunrise": 6.74,
