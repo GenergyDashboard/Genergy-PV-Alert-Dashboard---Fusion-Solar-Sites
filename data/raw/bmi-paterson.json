@@ -2,13 +2,13 @@
   "search_name": "BMI Paterson",
   "slug": "bmi-paterson",
   "station_code": "NE=53238019",
-  "fetched_at_utc": "2026-06-19T08:03:30.704651",
+  "fetched_at_utc": "2026-06-19T08:31:59.178014",
   "date": "2026-06-19",
   "plant_name": "BMI Paterson",
-  "total_kwh": 40.64,
-  "day_power": 40.64,
-  "month_power": 3087.53,
-  "total_power": 177678.35,
+  "total_kwh": 52.46,
+  "day_power": 52.46,
+  "month_power": 3099.35,
+  "total_power": 177690.17,
   "health_state": 2,
   "hourly_pv": [
     0.0,
@@ -20,7 +20,7 @@
     0.0,
     0.92,
     12.65,
-    0.0,
+    27.07,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 8
+  "last_hour": 9
 }
