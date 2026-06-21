@@ -2,13 +2,13 @@
   "search_name": "Shoprite Parklands",
   "slug": "shoprite-parklands",
   "station_code": "NE=51316594",
-  "fetched_at_utc": "2026-06-21T07:59:57.367098",
+  "fetched_at_utc": "2026-06-21T11:22:36.606678",
   "date": "2026-06-21",
   "plant_name": "Shoprite Parklands",
-  "total_kwh": 23.43,
-  "day_power": 23.43,
-  "month_power": 8610.52,
-  "total_power": 679189.05,
+  "total_kwh": 195.67,
+  "day_power": 195.67,
+  "month_power": 8782.76,
+  "total_power": 679361.29,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -20,9 +20,9 @@
     0.0,
     0.21,
     5.7,
-    0.0,
-    0.0,
-    0.0,
+    18.81,
+    29.3,
+    58.52,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 8
+  "last_hour": 11
 }
