@@ -1,9 +1,9 @@
 {
   "plant": "Bel Essex (Valeo)",
-  "last_updated": "2026-06-22 09:13 SAST",
+  "last_updated": "2026-06-22 09:43 SAST",
   "date": "2026-06-22",
-  "total_kwh": 136.22,
-  "last_hour": 7,
+  "total_kwh": 240.6,
+  "last_hour": 8,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -20,7 +20,7 @@
       0.0,
       0.0,
       11.35,
-      0.0,
+      98.43,
       0.0,
       0.0,
       0.0,
@@ -73,7 +73,7 @@
     0.0,
     0.0,
     11.35,
-    0.0,
+    98.43,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-06-22": {
-      "total_kwh": 136.22,
+      "total_kwh": 240.6,
       "hourly": [
         0.0,
         0.0,
@@ -2052,7 +2052,7 @@
         0.0,
         0.0,
         11.35,
-        0.0,
+        98.43,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-06-22 09:13 SAST",
-      "last_hour": 7
+      "last_updated": "2026-06-22 09:43 SAST",
+      "last_hour": 8
     }
   },
   "thresholds": {
@@ -2107,7 +2107,17 @@
     "min_history_days": 7
   },
   "debug": {
-    "reason": "too early",
+    "pct_of_avg": 148,
+    "expected_by_now": 162.4,
+    "effective_expected": 143.7,
+    "irrad_factor": 0.884,
+    "actual_kwh": 240.6,
+    "pace_trigger": 43.1,
+    "projected_total": 2198.9,
+    "daily_min": 217.3,
+    "curve_fraction": 0.109,
+    "sunrise": 6.74,
+    "sunset": 17.26,
     "sample_days": 30
   }
 }
