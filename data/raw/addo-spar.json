@@ -2,13 +2,13 @@
   "search_name": "Addo Spar Smart Logger",
   "slug": "addo-spar",
   "station_code": "NE=51009860",
-  "fetched_at_utc": "2026-06-22T12:15:05.333629",
+  "fetched_at_utc": "2026-06-22T18:45:43.412162",
   "date": "2026-06-22",
   "plant_name": "Addo Spar Smart Logger",
-  "total_kwh": 497.84,
-  "day_power": 497.84,
-  "month_power": 14008.28,
-  "total_power": 778851.75,
+  "total_kwh": 593.5,
+  "day_power": 593.5,
+  "month_power": 14103.94,
+  "total_power": 778947.41,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -24,11 +24,11 @@
     86.37,
     112.19,
     120.36,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
+    109.43,
+    53.88,
+    31.78,
+    21.15,
+    1.05,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 12
+  "last_hour": 17
 }

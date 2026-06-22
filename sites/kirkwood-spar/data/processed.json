@@ -1,9 +1,9 @@
 {
   "plant": "Kirkwood Spar",
-  "last_updated": "2026-06-22 14:15 SAST",
+  "last_updated": "2026-06-22 20:45 SAST",
   "date": "2026-06-22",
-  "total_kwh": 170.15,
-  "last_hour": 12,
+  "total_kwh": 208.69,
+  "last_hour": 17,
   "status": "ok",
   "alerts": {
     "offline": false,
@@ -25,11 +25,11 @@
       29.25,
       33.59,
       36.03,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
-      0.0,
+      43.27,
+      20.93,
+      13.6,
+      7.23,
+      0.24,
       0.0,
       0.0,
       0.0,
@@ -78,11 +78,11 @@
     29.25,
     33.59,
     36.03,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
-    0.0,
+    43.27,
+    20.93,
+    13.6,
+    7.23,
+    0.24,
     0.0,
     0.0,
     0.0,
@@ -2042,7 +2042,7 @@
       "last_hour": 17
     },
     "2026-06-22": {
-      "total_kwh": 170.15,
+      "total_kwh": 208.69,
       "hourly": [
         0.0,
         0.0,
@@ -2057,11 +2057,11 @@
         29.25,
         33.59,
         36.03,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        43.27,
+        20.93,
+        13.6,
+        7.23,
+        0.24,
         0.0,
         0.0,
         0.0,
@@ -2095,8 +2095,8 @@
         0,
         0
       ],
-      "last_updated": "2026-06-22 14:15 SAST",
-      "last_hour": 12
+      "last_updated": "2026-06-22 20:45 SAST",
+      "last_hour": 17
     }
   },
   "thresholds": {
@@ -2107,17 +2107,7 @@
     "min_history_days": 7
   },
   "debug": {
-    "pct_of_avg": 129,
-    "expected_by_now": 131.7,
-    "effective_expected": 142.3,
-    "irrad_factor": 1.081,
-    "actual_kwh": 170.15,
-    "pace_trigger": 42.7,
-    "projected_total": 262.9,
-    "daily_min": 35.2,
-    "curve_fraction": 0.647,
-    "sunrise": 6.74,
-    "sunset": 17.26,
+    "reason": "nighttime",
     "sample_days": 30
   }
 }
