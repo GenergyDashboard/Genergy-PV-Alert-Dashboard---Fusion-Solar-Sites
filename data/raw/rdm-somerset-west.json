@@ -2,13 +2,13 @@
   "search_name": "RDM Somerset West 5MW",
   "slug": "rdm-somerset-west",
   "station_code": "NE=51657840",
-  "fetched_at_utc": "2026-06-23T09:46:04.525718",
+  "fetched_at_utc": "2026-06-23T10:36:22.808452",
   "date": "2026-06-23",
   "plant_name": "RDM Somerset West 5MW",
-  "total_kwh": 3391.55,
-  "day_power": 3391.55,
-  "month_power": 260574.52,
-  "total_power": 11797431.28,
+  "total_kwh": 4476.34,
+  "day_power": 4476.34,
+  "month_power": 261659.31,
+  "total_power": 11798516.07,
   "health_state": 3,
   "hourly_pv": [
     0.0,
@@ -22,7 +22,7 @@
     368.41,
     927.48,
     806.18,
-    0.0,
+    1332.3,
     0.0,
     0.0,
     0.0,
@@ -36,5 +36,5 @@
     0.0,
     0.0
   ],
-  "last_hour": 10
+  "last_hour": 11
 }
